@@ -570,7 +570,7 @@ def generate_interactive_itinerary_website(
 
         data_json_path = out_dir / "itinerary_data.json"
         data_json_path.write_text(
-            json.dumps(itinerary_dict, indent=2, ensure_ascii=False),
+            json.dumps(itinerary_dict, separators=(",", ":"), ensure_ascii=False),
             encoding="utf-8",
         )
         generated_files = [str(data_json_path)]
@@ -602,7 +602,7 @@ def generate_interactive_itinerary_website(
             }
             a2ui_path = out_dir / "a2ui_surface.json"
             a2ui_path.write_text(
-                json.dumps(a2ui_payload, indent=2, ensure_ascii=False),
+                json.dumps(a2ui_payload, separators=(",", ":"), ensure_ascii=False),
                 encoding="utf-8",
             )
             generated_files.append(str(a2ui_path))

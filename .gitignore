@@ -29,3 +29,5 @@ crash.log
 *.db
 *.sqlite3
 artifacts/
+web/itinerary_data.json
+web/a2ui_surface.json
