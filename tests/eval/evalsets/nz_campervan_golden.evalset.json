@@ -1,0 +1,115 @@
+{
+  "eval_set_id": "kiwicamp_nz_campervan_golden_evalset_v1",
+  "name": "KiwiCamp 28-Day New Zealand December Campervan Odyssey Golden Dataset",
+  "description": "Golden evaluation benchmark testing route calculation, guided error recovery, DOC campsite grounding, December weather advisories, media/website generation, and HITL booking confirmation gates.",
+  "eval_cases": [
+    {
+      "eval_id": "case_01_cape_reinga_northern_tip_route",
+      "user_query": "Calculate the campervan route from Paihia in the Bay of Islands to the northernmost tip at Cape Reinga and check campsites there.",
+      "expected_tool_calls": [
+        {
+          "tool_name": "calculate_campervan_route_segment",
+          "args": {
+            "origin": "Paihia, Bay of Islands",
+            "destination": "Tapotupotu Bay (Cape Reinga)",
+            "campervan_length_meters": 7.2
+          }
+        },
+        {
+          "tool_name": "search_nz_holiday_parks_and_campsites",
+          "args": {
+            "region_or_town": "Cape Reinga"
+          }
+        }
+      ],
+      "expected_outcome_keywords": [
+        "Tapotupotu Bay",
+        "Cape Reinga",
+        "Ninety Mile Beach",
+        "215"
+      ]
+    },
+    {
+      "eval_id": "case_02_guided_error_forbidden_ninety_mile_beach",
+      "user_query": "Can I drive my 7.2m campervan directly down Ninety Mile Beach sand from Cape Reinga?",
+      "expected_tool_calls": [
+        {
+          "tool_name": "calculate_campervan_route_segment",
+          "args": {
+            "origin": "Cape Reinga",
+            "destination": "Ninety Mile Beach"
+          }
+        }
+      ],
+      "expected_error_code": "PROHIBITED_RENTAL_CAMPERVAN_ROAD",
+      "expected_outcome_keywords": [
+        "prohibited",
+        "State Highway 1",
+        "insurance"
+      ]
+    },
+    {
+      "eval_id": "case_03_guided_error_unsafe_marathon_drive",
+      "user_query": "Calculate a single-day non-stop campervan drive from Auckland to Wellington.",
+      "expected_tool_calls": [
+        {
+          "tool_name": "calculate_campervan_route_segment",
+          "args": {
+            "origin": "Auckland",
+            "destination": "Wellington"
+          }
+        }
+      ],
+      "expected_error_code": "EXCEEDS_SAFE_DAILY_DRIVING_LIMIT",
+      "expected_outcome_keywords": [
+        "Split this journey",
+        "Rotorua",
+        "Taupo"
+      ]
+    },
+    {
+      "eval_id": "case_04_hitl_cook_strait_ferry_confirmation",
+      "user_query": "Reserve the Interislander Cook Strait campervan ferry from Wellington to Picton on 2025-12-13 for a 7.2m campervan.",
+      "expected_tool_calls": [
+        {
+          "tool_name": "reserve_cook_strait_campervan_ferry",
+          "args": {
+            "sailing_date_iso": "2025-12-13",
+            "operator": "Interislander",
+            "departure_port": "Wellington",
+            "campervan_length_meters": 7.2
+          }
+        }
+      ],
+      "expected_status": "pending_human_confirmation",
+      "expected_outcome_keywords": [
+        "HOLD-HITL-COOKSTRAIT",
+        "LPG"
+      ]
+    },
+    {
+      "eval_id": "case_05_southern_tip_slope_point_and_full_website_build",
+      "user_query": "Verify the Southernmost tip leg to Bluff and Slope Point on Day 22 and generate the complete 28-day interactive website.",
+      "expected_tool_calls": [
+        {
+          "tool_name": "fetch_destination_media_gallery",
+          "args": {
+            "day_number": 22
+          }
+        },
+        {
+          "tool_name": "generate_interactive_itinerary_website",
+          "args": {
+            "output_directory": "web"
+          }
+        }
+      ],
+      "expected_outcome_keywords": [
+        "Bluff",
+        "Slope Point",
+        "itinerary_data.json",
+        "a2ui_surface.json"
+      ]
+    }
+  ]
+}

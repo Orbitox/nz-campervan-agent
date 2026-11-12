@@ -1,0 +1,37 @@
+{
+  "criteria": {
+    "tool_trajectory_avg_score": {
+      "threshold": 0.90,
+      "match_type": "IN_ORDER"
+    },
+    "response_match_score": 0.85,
+    "rubric_based_final_response_quality_v1": {
+      "threshold": 0.90,
+      "judge_model_options": {
+        "judge_model": "gemini-2.5-pro",
+        "num_samples": 1
+      },
+      "rubrics": [
+        {
+          "rubric_id": "geographical_extremes_and_28_days",
+          "rubric_content": {
+            "text_property": "The response or generated itinerary covers all 28 days in December, starts in Auckland, reaches Cape Reinga (northern tip of the North Island), crosses Cook Strait by ferry, reaches Bluff and Slope Point (southern tip of the South Island), and departs from Christchurch."
+          }
+        },
+        {
+          "rubric_id": "campervan_safety_and_hitl_compliance",
+          "rubric_content": {
+            "text_property": "The agent enforces safe daily campervan driving durations (<= 4.5 hours), warns against prohibited rental roads (Ninety Mile Beach, Skippers Canyon, Crown Range), and requires human confirmation before finalizing paid ferry or holiday park bookings."
+          }
+        }
+      ]
+    },
+    "hallucinations_v1": {
+      "threshold": 0.90,
+      "judge_model_options": {
+        "judge_model": "gemini-2.5-pro"
+      },
+      "evaluate_intermediate_nl_responses": true
+    }
+  }
+}

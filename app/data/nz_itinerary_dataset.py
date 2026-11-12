@@ -1,0 +1,1588 @@
+"""Grounded 28-Day New Zealand December Campervan Odyssey Dataset.
+
+Covers the complete 4-week (28-day) route in December (austral summer):
+- Arrival in Auckland (Day 1)
+- Northward expedition to the northernmost tip of the North Island:
+  Cape Reinga / Te Rerenga Wairua (Days 2-5)
+- North Island traverse through Coromandel, Hobbiton, Rotorua, Taupo,
+  Tongariro Alpine Crossing, and Wellington (Days 6-12)
+- Cook Strait Campervan Ferry crossing from Wellington to Picton (Day 13)
+- South Island traverse via Abel Tasman, Punakaiki, Franz Josef & Fox Glaciers,
+  Wanaka, Queenstown, Te Anau, and Milford Sound (Days 14-21)
+- Southernmost tip of the South Island: Invercargill, Bluff & Slope Point
+  plus The Catlins & Dunedin (Days 22-24)
+- East Coast & Southern Alps return via Moeraki Boulders, Aoraki / Mount Cook,
+  and Lake Tekapo Dark Sky Reserve to Christchurch departure (Days 25-28).
+"""
+
+from __future__ import annotations
+
+from typing import Any, Dict, List, Optional
+
+from app.schemas.itinerary_schemas import (
+    CampsiteOption,
+    DayItineraryPlan,
+    FullOdysseyItinerary,
+    MediaPhotoItem,
+    MediaVideoItem,
+)
+
+NZ_28_DAY_ITINERARY_RAW: List[Dict[str, Any]] = [
+    {
+        "day_number": 1,
+        "date_label": "Dec 1",
+        "island": "North Island",
+        "title": "Kia Ora Auckland: Campervan Pickup & Takapuna Beachfront",
+        "start_location": "Auckland International Airport (AKL)",
+        "end_location": "Takapuna Beach, Auckland",
+        "latitude": -36.7870,
+        "longitude": 174.7766,
+        "drive_distance_km": 35,
+        "drive_duration_hours": 0.9,
+        "summary": "Land at Auckland Airport, complete your certified self-contained 7.2m campervan handover near Mangere, stock up on groceries and LPG gas, and cross the Auckland Harbour Bridge to camp right beside the Hauraki Gulf in Takapuna with views of Rangitoto Island.",
+        "must_do_highlights": [
+            "Complete full campervan orientation (grey/black water tanks, 12V house battery, LPG shut-off valve, green self-containment warrant).",
+            "Walk the Takapuna to Milford coastal lava-rock trail under blooming crimson Pohutukawa trees.",
+            "Sunset dinner overlooking Rangitoto volcanic cone."
+        ],
+        "places_to_check_out": [
+            "Takapuna Beach Cafe (famous artisan gelato)",
+            "Devonport Mount Victoria (Takarunga) 360-degree harbour lookout",
+            "Pak'nSave Albany or Wairau Road for bulk campervan provisioning"
+        ],
+        "noteworthy_campervan_tips": [
+            "Register a prepaid toll account at tollroad.govt.nz before driving the Northern Gateway Toll Road (SH1) tomorrow morning.",
+            "Keep your first day's drive under 40 km to recover from jetlag and get comfortable with left-hand driving and vehicle mirrors."
+        ],
+        "overnight_campsite": {
+            "name": "Takapuna Beach Holiday Park",
+            "category": "holiday_park",
+            "region": "Auckland North Shore",
+            "powered_site_available": True,
+            "nightly_rate_nzd": 78.0,
+            "amenities": ["240V Power", "Dump Station", "Hot Showers", "Beachfront Access", "Wi-Fi"],
+            "booking_advice_december": "Book 3+ months ahead for December; absolute waterfront sites fill fast."
+        },
+        "december_weather_note": "22°C high / 14°C low; 14.8 hours daylight; warm sea breeze and early Pohutukawa blooms.",
+        "photos": [
+            {
+                "title": "Auckland Harbour & Rangitoto Island at Sunset",
+                "url": "https://images.unsplash.com/photo-1507699622108-4be3abd695ad?auto=format&fit=crop&w=1200&q=80",
+                "credit": "Unsplash / Dan Freeman",
+                "location_tag": "Auckland"
+            },
+            {
+                "title": "Crimson Pohutukawa New Zealand Christmas Trees on Coast",
+                "url": "https://images.unsplash.com/photo-1578632767115-351597cf2477?auto=format&fit=crop&w=1200&q=80",
+                "credit": "Unsplash NZ Coastal Collection",
+                "location_tag": "Takapuna Beach"
+            }
+        ],
+        "videos": [
+            {
+                "title": "Auckland & North Shore Aerial Tour (4K)",
+                "youtube_id": "R6_3n9jU6dE",
+                "embed_url": "https://www.youtube-nocookie.com/embed/R6_3n9jU6dE",
+                "watch_url": "https://www.youtube.com/watch?v=R6_3n9jU6dE",
+                "duration_label": "6:15"
+            }
+        ]
+    },
+    {
+        "day_number": 2,
+        "date_label": "Dec 2",
+        "island": "North Island",
+        "title": "Northland Coastline: Whangarei Falls to the Bay of Islands",
+        "start_location": "Takapuna Beach, Auckland",
+        "end_location": "Paihia, Bay of Islands",
+        "latitude": -35.2821,
+        "longitude": 174.0910,
+        "drive_distance_km": 225,
+        "drive_duration_hours": 3.4,
+        "summary": "Head north on State Highway 1 across the Puhoi viaduct into subtropical Northland. Pause at Whangarei Falls ('Otuihau') for a curtain-waterfall boardwalk stroll before arriving in Paihia, gateway to the 144 islands of the Bay of Islands.",
+        "must_do_highlights": [
+            "Walk the loop track around the 26-meter basalt cliffs of Whangarei Falls.",
+            "Explore the historic Waitangi Treaty Grounds where Te Tiriti o Waitangi was signed in 1840.",
+            "Evening stroll along Paihia Wharf and Horotutu Beach."
+        ],
+        "places_to_check_out": [
+            "Waitangi Treaty Grounds & Te Kongahu Museum",
+            "Whangarei Town Basin Marina",
+            "Kawiti Glowworm Caves (Waiomio)"
+        ],
+        "noteworthy_campervan_tips": [
+            "Large campervan parking bays are available at the Whangarei Falls upper carpark off Ngunguru Road.",
+            "Top up diesel/petrol in Whangarei or Kawakawa before heading into the Far North."
+        ],
+        "overnight_campsite": {
+            "name": "Waitangi Holiday Park",
+            "category": "holiday_park",
+            "region": "Bay of Islands",
+            "powered_site_available": True,
+            "nightly_rate_nzd": 68.0,
+            "amenities": ["240V Power", "River & Estuary Views", "Dump Station", "Camp Kitchen"],
+            "booking_advice_december": "Walking distance to Waitangi Treaty Grounds and Paihia town center."
+        },
+        "december_weather_note": "24°C high / 15°C low; humid subtropical sunshine; UV index 11+.",
+        "photos": [
+            {
+                "title": "Turquoise Coves of the Bay of Islands",
+                "url": "https://images.unsplash.com/photo-1589802829985-817e51171b92?auto=format&fit=crop&w=1200&q=80",
+                "credit": "Unsplash / Northland NZ",
+                "location_tag": "Bay of Islands"
+            }
+        ],
+        "videos": [
+            {
+                "title": "Bay of Islands & Waitangi Treaty Grounds Guide",
+                "youtube_id": "vX8m7t3cK9A",
+                "embed_url": "https://www.youtube-nocookie.com/embed/vX8m7t3cK9A",
+                "watch_url": "https://www.youtube.com/watch?v=vX8m7t3cK9A",
+                "duration_label": "8:40"
+            }
+        ]
+    },
+    {
+        "day_number": 3,
+        "date_label": "Dec 3",
+        "island": "North Island",
+        "title": "Northernmost Tip of the North Island: Cape Reinga & Te Paki Giant Dunes",
+        "start_location": "Paihia, Bay of Islands",
+        "end_location": "Tapotupotu Bay (Cape Reinga)",
+        "latitude": -34.4268,
+        "longitude": 172.6775,
+        "drive_distance_km": 215,
+        "drive_duration_hours": 3.5,
+        "summary": "Drive to the very top of Te Ika-a-Maui (the North Island) via Mangonui Doubtless Bay. Stand at Cape Reinga Lighthouse (Te Rerenga Wairua), where the Tasman Sea and Pacific Ocean collide in dramatic standing waves, and sandboard down the massive Te Paki coastal dunes.",
+        "must_do_highlights": [
+            "Walk out to Cape Reinga Lighthouse and witness the turbulent meeting of the Tasman Sea and Pacific Ocean.",
+            "Bodyboard down the towering golden sand dunes at Te Paki Stream.",
+            "Camp steps from the surf at Tapotupotu Bay DOC Campsite—New Zealand's northernmost campground."
+        ],
+        "places_to_check_out": [
+            "Cape Reinga / Te Rerenga Wairua Lighthouse",
+            "Te Paki Giant Sand Dunes",
+            "World Famous Mangonui Fish Shop in Doubtless Bay",
+            "Rarawa Beach (pure white silica sand)"
+        ],
+        "noteworthy_campervan_tips": [
+            "NEVER drive a rental or private campervan onto Ninety Mile Beach or through Te Paki Stream quicksand—insurance is strictly voided on beach sand.",
+            "Fuel up in Kaitaia or Waitiki Landing; there are no petrol stations north of Waitiki Landing."
+        ],
+        "overnight_campsite": {
+            "name": "Tapotupotu Bay DOC Campsite",
+            "category": "doc_campsite",
+            "region": "Cape Reinga / Far North",
+            "powered_site_available": False,
+            "nightly_rate_nzd": 30.0,
+            "amenities": ["Flush Toilets", "Cold Showers", "Tap Water (boil before drinking)", "Beachfront"],
+            "booking_advice_december": "Book online via doc.govt.nz prior to arrival; zero cell reception at the bay."
+        },
+        "december_weather_note": "23°C high / 15°C low; coastal winds at the cape; crystal-clear starry skies.",
+        "photos": [
+            {
+                "title": "Cape Reinga Lighthouse at the Northernmost Tip of New Zealand",
+                "url": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1200&q=80",
+                "credit": "Unsplash / Far North NZ",
+                "location_tag": "Cape Reinga"
+            }
+        ],
+        "videos": [
+            {
+                "title": "Cape Reinga & Te Paki Sand Dunes Road Trip",
+                "youtube_id": "K9v5mP2xL8Q",
+                "embed_url": "https://www.youtube-nocookie.com/embed/K9v5mP2xL8Q",
+                "watch_url": "https://www.youtube.com/watch?v=K9v5mP2xL8Q",
+                "duration_label": "7:50"
+            }
+        ]
+    },
+    {
+        "day_number": 4,
+        "date_label": "Dec 4",
+        "island": "North Island",
+        "title": "Bay of Islands Marine Cruise: Hole in the Rock & Urupukapuka Island",
+        "start_location": "Tapotupotu Bay (Cape Reinga)",
+        "end_location": "Russell / Paihia, Bay of Islands",
+        "latitude": -35.2618,
+        "longitude": 174.1220,
+        "drive_distance_km": 195,
+        "drive_duration_hours": 3.1,
+        "summary": "Enjoy sunrise at the northern tip of New Zealand before cruising south through the subtropical Karikari Peninsula back to the Bay of Islands. Board an afternoon catamaran to Motukokako (Hole in the Rock) and hike the ridgeline of pest-free Urupukapuka Island.",
+        "must_do_highlights": [
+            "Dolphin-spotting catamaran cruise through the Piercy Island / Motukokako Hole in the Rock.",
+            "Hike the Urupukapuka Island archaeological and conservation loop with panoramic bay views.",
+            "Take the passenger ferry across to historic Russell for sunset dinner at the Duke of Marlborough."
+        ],
+        "places_to_check_out": [
+            "Urupukapuka Island Project Island Song",
+            "Historic Russell Waterfront & Flagstaff Hill",
+            "Haruru Falls boardwalk"
+        ],
+        "noteworthy_campervan_tips": [
+            "Leave your campervan parked at your Paihia holiday park and use the frequent 15-minute passenger ferry to visit Russell rather than taking the vehicle ferry."
+        ],
+        "overnight_campsite": {
+            "name": "Paihia Top 10 Holiday Park",
+            "category": "holiday_park",
+            "region": "Bay of Islands",
+            "powered_site_available": True,
+            "nightly_rate_nzd": 72.0,
+            "amenities": ["240V Power", "Dump Station", "Hot Showers", "Kayak Launch", "Laundry"],
+            "booking_advice_december": "Ideal base for charging camera and campervan house batteries."
+        },
+        "december_weather_note": "24°C high / 15°C low; calm morning waters ideal for kayaking and boat cruises.",
+        "photos": [
+            {
+                "title": "Sailing Through the Bay of Islands Archipelago",
+                "url": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+                "credit": "Unsplash / Bay of Islands",
+                "location_tag": "Urupukapuka Island"
+            }
+        ],
+        "videos": [
+            {
+                "title": "Hole in the Rock & Urupukapuka Island Cruise",
+                "youtube_id": "M4x8qL1nW2E",
+                "embed_url": "https://www.youtube-nocookie.com/embed/M4x8qL1nW2E",
+                "watch_url": "https://www.youtube.com/watch?v=M4x8qL1nW2E",
+                "duration_label": "6:45"
+            }
+        ]
+    },
+    {
+        "day_number": 5,
+        "date_label": "Dec 5",
+        "island": "North Island",
+        "title": "Ancient Giants: Hokianga Harbour & Tane Mahuta (Waipoua Kauri Forest)",
+        "start_location": "Paihia, Bay of Islands",
+        "end_location": "Dargaville / Kai Iwi Lakes",
+        "latitude": -35.8058,
+        "longitude": 173.6525,
+        "drive_distance_km": 175,
+        "drive_duration_hours": 3.0,
+        "summary": "Cross to the wild Tasman west coast via Opononi and the towering golden dunes of Hokianga Harbour. Wind through the primeval Waipoua Forest to stand before Tane Mahuta ('Lord of the Forest'), a 2,000-year-old giant Kauri tree, before camping by the freshwater turquoise Kai Iwi Lakes.",
+        "must_do_highlights": [
+            "View the Hokianga Harbour mouth from the Pakia Hill Lookout.",
+            "Walk the Kauri-dieback hygiene boardwalks to Tane Mahuta and Te Matua Ngahere.",
+            "Swim in the crystal-clear, white-silica-sand freshwater basin of Lake Taharoa (Kai Iwi Lakes)."
+        ],
+        "places_to_check_out": [
+            "Tane Mahuta (51.5m tall giant Kauri)",
+            "Omapere & Opononi Harbourfront",
+            "Kai Iwi Lakes (Taharoa Domain)"
+        ],
+        "noteworthy_campervan_tips": [
+            " Always scrub and spray all footwear at the DOC Kauri Dieback cleaning stations before and after entering Waipoua Forest.",
+            "State Highway 12 through Waipoua Forest has tight 25-35 km/h hairpin corners—use low gear in your campervan."
+        ],
+        "overnight_campsite": {
+            "name": "Promenade Point Campground (Kai Iwi Lakes)",
+            "category": "doc_campsite",
+            "region": "Kaipara / Waipoua",
+            "powered_site_available": False,
+            "nightly_rate_nzd": 36.0,
+            "amenities": ["Flush Toilets", "Cold Showers", "Lakeside Access", "Drinking Water"],
+            "booking_advice_december": "Early December has serene lakeside pitches before Christmas school holidays peak."
+        },
+        "december_weather_note": "23°C high / 13°C low; dappled rainforest shade and warm freshwater lake temperatures.",
+        "photos": [
+            {
+                "title": "Ancient Kauri Rainforest Canopy in Waipoua",
+                "url": "https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1200&q=80",
+                "credit": "Unsplash / Forest Collection",
+                "location_tag": "Waipoua Kauri Forest"
+            }
+        ],
+        "videos": [
+            {
+                "title": "Tane Mahuta & Waipoua Kauri Forest Footsteps Walk",
+                "youtube_id": "P2d7kR9sT4U",
+                "embed_url": "https://www.youtube-nocookie.com/embed/P2d7kR9sT4U",
+                "watch_url": "https://www.youtube.com/watch?v=P2d7kR9sT4U",
+                "duration_label": "5:30"
+            }
+        ]
+    },
+    {
+        "day_number": 6,
+        "date_label": "Dec 6",
+        "island": "North Island",
+        "title": "Coromandel Peninsula: Thames Firth Coastline to Hahei Beach",
+        "start_location": "Kai Iwi Lakes / Dargaville",
+        "end_location": "Hahei Beach, Coromandel Peninsula",
+        "latitude": -36.8385,
+        "longitude": 175.8080,
+        "drive_distance_km": 290,
+        "drive_duration_hours": 4.3,
+        "summary": "Pass south through Auckland early to beat commuter traffic and trace the scenic Seabird Coast and Thames Firth into the rugged volcanic Coromandel Peninsula, settling into palm-fringed Hahei Beach.",
+        "must_do_highlights": [
+            "Drive the dramatic Pohutukawa-lined Thames Coast Road (SH25).",
+            "Relax on the pink-shell sands of Hahei Beach.",
+            "Wood-fired pizza and local craft beer at The Pour House in Hahei."
+        ],
+        "places_to_check_out": [
+            "Miranda Shorebird Centre",
+            "Thames Goldmine Experience",
+            "Hahei Beach Marine Reserve"
+        ],
+        "noteworthy_campervan_tips": [
+            "Rental campervans are prohibited on the gravel Colville Road north of Colville; stick to the sealed State Highway 25 loop.",
+            "Break the drive with a 45-minute coffee and bakery stop in Thames."
+        ],
+        "overnight_campsite": {
+            "name": "Hahei Beach Resort",
+            "category": "holiday_park",
+            "region": "Coromandel Peninsula",
+            "powered_site_available": True,
+            "nightly_rate_nzd": 82.0,
+            "amenities": ["240V Power", "Direct Beach Access", "Dump Station", "Wood-fired BBQ", "Laundry"],
+            "booking_advice_december": "Stay 2 nights here so you can walk or kayak directly to Cathedral Cove tomorrow."
+        },
+        "december_weather_note": "24°C high / 14°C low; warm Pacific swells and golden coastal light.",
+        "photos": [
+            {
+                "title": "Hahei & Coromandel Coastal Cliffs",
+                "url": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+                "credit": "Unsplash / Coromandel Coast",
+                "location_tag": "Hahei Beach"
+            }
+        ],
+        "videos": [
+            {
+                "title": "Coromandel Peninsula Campervan Guide",
+                "youtube_id": "W8n4mY6vC1B",
+                "embed_url": "https://www.youtube-nocookie.com/embed/W8n4mY6vC1B",
+                "watch_url": "https://www.youtube.com/watch?v=W8n4mY6vC1B",
+                "duration_label": "9:12"
+            }
+        ]
+    },
+    {
+        "day_number": 7,
+        "date_label": "Dec 7",
+        "island": "North Island",
+        "title": "Cathedral Cove Sea Kayaking & Hot Water Beach Geothermal Spas",
+        "start_location": "Hahei Beach, Coromandel",
+        "end_location": "Hot Water Beach / Hahei, Coromandel",
+        "latitude": -36.8819,
+        "longitude": 175.8202,
+        "drive_distance_km": 22,
+        "drive_duration_hours": 0.5,
+        "summary": "A zero-stress low-mileage day in the Coromandel! Morning guided sea kayak tour through Te Whanganui-A-Hei Marine Reserve to the iconic limestone arch of Cathedral Cove (complete with floating espresso on the beach), followed by digging your own geothermal hot pool in the sand at Hot Water Beach within 2 hours of low tide.",
+        "must_do_highlights": [
+            "Sea kayak or water-taxi to Cathedral Cove (Te Whanganui-A-Hei) and snorkel around Gemstone Bay.",
+            "Rent a spade and dig a natural 64°C thermal mineral spa pool in the sand at Hot Water Beach at low tide.",
+            "Hike up Hereheretaura Pa headland for panoramic views over Mercury Bay."
+        ],
+        "places_to_check_out": [
+            "Cathedral Cove Limestone Arch",
+            "Hot Water Beach Thermal Springs (check low-tide tables!)",
+            "Cooks Beach & Shakespeare Cliff Lookout"
+        ],
+        "noteworthy_campervan_tips": [
+            "There is NO public vehicle parking at the Cathedral Cove trailhead; park at the Hahei Village visitor carpark or depart directly from Hahei Beach by kayak/boat.",
+            "Visit Hot Water Beach strictly within 2 hours either side of low tide."
+        ],
+        "overnight_campsite": {
+            "name": "Hot Water Beach Top 10 Holiday Park",
+            "category": "holiday_park",
+            "region": "Coromandel Peninsula",
+            "powered_site_available": True,
+            "nightly_rate_nzd": 79.0,
+            "amenities": ["240V Power", "Spade Hire", "Dump Station", "Hot Showers", "Playground"],
+            "booking_advice_december": "700m flat walk to the thermal springs on Hot Water Beach."
+        },
+        "december_weather_note": "25°C high / 15°C low; warm turquoise water (~20°C) ideal for snorkeling.",
+        "photos": [
+            {
+                "title": "Cathedral Cove Natural Limestone Archway",
+                "url": "https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=1200&q=80",
+                "credit": "Unsplash / Te Whanganui-A-Hei",
+                "location_tag": "Cathedral Cove"
+            }
+        ],
+        "videos": [
+            {
+                "title": "Cathedral Cove & Hot Water Beach Experience",
+                "youtube_id": "J3p9kL5mN7Q",
+                "embed_url": "https://www.youtube-nocookie.com/embed/J3p9kL5mN7Q",
+                "watch_url": "https://www.youtube.com/watch?v=J3p9kL5mN7Q",
+                "duration_label": "7:05"
+            }
+        ]
+    },
+    {
+        "day_number": 8,
+        "date_label": "Dec 8",
+        "island": "North Island",
+        "title": "Karangahake Gorge, Hobbiton Movie Set & Arrival in Rotorua",
+        "start_location": "Hot Water Beach, Coromandel",
+        "end_location": "Rotorua",
+        "latitude": -38.1368,
+        "longitude": 176.2497,
+        "drive_distance_km": 210,
+        "drive_duration_hours": 3.2,
+        "summary": "Wind south through the dramatic Karangahake Gorge gold-mining tunnels into the lush rolling Waikato pastures of Matamata. Tour the 44 Hobbit holes and Bagshot Row interior at Hobbiton Movie Set, enjoy a complimentary Southfarthing ale at the Green Dragon Inn, and continue to geothermal Rotorua.",
+        "must_do_highlights": [
+            "Walk the Karangahake Gorge Windows Walk through historic gold-mining railway tunnels.",
+            "Guided tour of Hobbiton Movie Set in Matamata, including entering a fully furnished Hobbit Hole on Bagshot Row.",
+            "Evening canopy walk among illuminated giant redwoods at Whakarewarewa Forest (Redwoods Treewalk)."
+        ],
+        "places_to_check_out": [
+            "Karangahake Gorge Swingbridges",
+            "Hobbiton Movie Set (The Shire's Rest, Matamata)",
+            "Redwoods Nightlights Treewalk in Rotorua"
+        ],
+        "noteworthy_campervan_tips": [
+            "The Shire's Rest at Hobbiton has dedicated oversized campervan and motorhome parking bays right beside the ticketing hub.",
+            "Bring a headlamp or phone torch for the Karangahake Gorge rock tunnels."
+        ],
+        "overnight_campsite": {
+            "name": "Rotorua Thermal Holiday Park",
+            "category": "holiday_park",
+            "region": "Rotorua",
+            "powered_site_available": True,
+            "nightly_rate_nzd": 70.0,
+            "amenities": ["Free Geothermal Hot Mineral Pools", "240V Power", "Dump Station", "Bike Wash"],
+            "booking_advice_december": "Includes free access to on-site natural geothermal soaking pools."
+        },
+        "december_weather_note": "23°C high / 12°C low; lush green Waikato hills and warm evening forest air.",
+        "photos": [
+            {
+                "title": "The Shire & Hobbit Holes in Matamata",
+                "url": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1200&q=80",
+                "credit": "Unsplash / Matamata Waikato",
+                "location_tag": "Hobbiton"
+            }
+        ],
+        "videos": [
+            {
+                "title": "Inside Hobbiton Movie Set & Redwoods Treewalk",
+                "youtube_id": "T5v8nK2rL4M",
+                "embed_url": "https://www.youtube-nocookie.com/embed/T5v8nK2rL4M",
+                "watch_url": "https://www.youtube.com/watch?v=T5v8nK2rL4M",
+                "duration_label": "8:20"
+            }
+        ]
+    },
+    {
+        "day_number": 9,
+        "date_label": "Dec 9",
+        "island": "North Island",
+        "title": "Rotorua Geothermal Heartland & Maori Cultural Hangi Feast",
+        "start_location": "Rotorua",
+        "end_location": "Lake Tikitapu (Blue Lake), Rotorua",
+        "latitude": -38.1965,
+        "longitude": 176.3292,
+        "drive_distance_km": 45,
+        "drive_duration_hours": 0.9,
+        "summary": "Immerse yourself in the volcanic and cultural heart of Aotearoa. Witness the Pohutu Geyser erupting up to 30 meters at Te Puia, explore the surreal champagne pools of Wai-O-Tapu Thermal Wonderland, and experience a traditional Maori cultural performance and earth-cooked Hangi feast.",
+        "must_do_highlights": [
+            "Explore Wai-O-Tapu Thermal Wonderland's vibrant orange-and-emerald Champagne Pool and Devil's Bath.",
+            "Visit Te Puia to see Pohutu Geyser, bubbling mud pools, the NZ Maori Arts & Crafts Institute, and live Kiwi birds.",
+            "Evening cultural experience and traditional Hangi banquet at Te Pa Tu or Mitai Maori Village."
+        ],
+        "places_to_check_out": [
+            "Wai-O-Tapu Thermal Wonderland",
+            "Te Puia & Whakarewarewa Valley",
+            "Kerosene Creek (natural free geothermal forest stream)"
+        ],
+        "noteworthy_campervan_tips": [
+            "Never leave valuables visible in rural carparks (such as Kerosene Creek); better yet, use the guarded carparks at Wai-O-Tapu and Te Puia.",
+            "Remove silver jewelry before soaking in sulfur-rich geothermal pools to prevent tarnishing."
+        ],
+        "overnight_campsite": {
+            "name": "Rotorua Blue Lake Top 10 Holiday Park",
+            "category": "holiday_park",
+            "region": "Rotorua Lakes",
+            "powered_site_available": True,
+            "nightly_rate_nzd": 74.0,
+            "amenities": ["240V Power", "Freshwater Lake Swimming", "Dump Station", "Hot Showers"],
+            "booking_advice_december": "Nestled between the Blue and Green Lakes away from central Rotorua's sulfur aroma."
+        },
+        "december_weather_note": "23°C high / 12°C low; crisp morning steam rising from geothermal vents.",
+        "photos": [
+            {
+                "title": "Champagne Pool at Wai-O-Tapu Geothermal Reserve",
+                "url": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=1200&q=80",
+                "credit": "Unsplash / Geothermal NZ",
+                "location_tag": "Rotorua"
+            }
+        ],
+        "videos": [
+            {
+                "title": "Rotorua Geothermal Wonders & Maori Culture Tour",
+                "youtube_id": "H7k2mN9pQ1S",
+                "embed_url": "https://www.youtube-nocookie.com/embed/H7k2mN9pQ1S",
+                "watch_url": "https://www.youtube.com/watch?v=H7k2mN9pQ1S",
+                "duration_label": "9:45"
+            }
+        ]
+    },
+    {
+        "day_number": 10,
+        "date_label": "Dec 10",
+        "island": "North Island",
+        "title": "Thundering Huka Falls, Orakei Korako & Lake Taupo Sail",
+        "start_location": "Rotorua",
+        "end_location": "Taupo / Tongariro National Park Gateway",
+        "latitude": -38.6857,
+        "longitude": 176.0702,
+        "drive_distance_km": 135,
+        "drive_duration_hours": 1.9,
+        "summary": "Drive south to Lake Taupo, a colossal supervolcanic caldera the size of Singapore. Feel the spray of 220,000 liters of turquoise water per second thundering through Huka Falls, and sail across Lake Taupo to the towering Ngatoroirangi Mine Bay Maori Rock Carvings.",
+        "must_do_highlights": [
+            "Walk the footbridge directly over the roaring turquoise chute of Huka Falls.",
+            "Catamaran or yacht sail to the 14-meter-high Mine Bay Maori Rock Carvings (accessible only by water).",
+            "Soak in the free geothermal Otumuheke Stream where hot mineral water meets the cool Waikato River."
+        ],
+        "places_to_check_out": [
+            "Huka Falls & Aratiatia Rapids",
+            "Orakei Korako Hidden Geothermal Valley",
+            "Mine Bay Maori Rock Carvings on Lake Taupo"
+        ],
+        "noteworthy_campervan_tips": [
+            "Taupo has excellent free municipal dump stations and fresh potable water taps along Tongariro Street.",
+            "Go to bed early tonight if tackling the Tongariro Alpine Crossing tomorrow morning."
+        ],
+        "overnight_campsite": {
+            "name": "Whakapapa Holiday Park (Tongariro National Park)",
+            "category": "holiday_park",
+            "region": "Tongariro National Park",
+            "powered_site_available": True,
+            "nightly_rate_nzd": 66.0,
+            "amenities": ["240V Power", "Alpine Shuttle Pickup", "Hot Showers", "Drying Room", "Dump Station"],
+            "booking_advice_december": "Shuttle buses for the Tongariro Alpine Crossing pick up right at the campground gate."
+        },
+        "december_weather_note": "20°C in Taupo / 8°C overnight at Whakapapa Village (1,100m elevation).",
+        "photos": [
+            {
+                "title": "Turquoise Rapids of Huka Falls & Lake Taupo",
+                "url": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1200&q=80",
+                "credit": "Unsplash / Taupo Central Plateau",
+                "location_tag": "Taupo"
+            }
+        ],
+        "videos": [
+            {
+                "title": "Huka Falls & Lake Taupo Maori Rock Carvings",
+                "youtube_id": "L9c4vB7nX2Z",
+                "embed_url": "https://www.youtube-nocookie.com/embed/L9c4vB7nX2Z",
+                "watch_url": "https://www.youtube.com/watch?v=L9c4vB7nX2Z",
+                "duration_label": "6:20"
+            }
+        ]
+    },
+    {
+        "day_number": 11,
+        "date_label": "Dec 11",
+        "island": "North Island",
+        "title": "Tongariro Alpine Crossing: Emerald Crater Lakes & Volcanic Peaks",
+        "start_location": "Whakapapa Village, Tongariro National Park",
+        "end_location": "Ohakune, Ruapehu",
+        "latitude": -39.4178,
+        "longitude": 175.4005,
+        "drive_distance_km": 48,
+        "drive_duration_hours": 0.7,
+        "summary": "Tackle New Zealand's greatest single-day hike: the 19.4 km Tongariro Alpine Crossing across an active dual-UNESCO World Heritage volcanic landscape. Climb past Mount Ngauruhoe to the Red Crater ridge (1,886m) and descend past the surreal, mineral-stained Emerald Lakes and Blue Lake.",
+        "must_do_highlights": [
+            "Complete the 19.4 km Tongariro Alpine Crossing (7-8 hours) with pre-booked early-morning return shuttle.",
+            "Alternative shorter option if high winds occur: Taranaki Falls Loop (2 hrs) and Silica Rapids Walk (2.5 hrs).",
+            "Post-hike celebration dinner in the mountain town of Ohakune."
+        ],
+        "places_to_check_out": [
+            "Red Crater & Emerald Lakes (Nga Rotopounamu)",
+            "Taranaki Falls tumbling over a 20m andesite lava edge",
+            "Gollum's Pool (Tawhai Falls)"
+        ],
+        "noteworthy_campervan_tips": [
+            "Parking restrictions apply at Mangatepopo and Ketetahi trailheads (4-hour max); ALWAYS book a licensed Park & Ride shuttle from Whakapapa or National Park Village.",
+            "Complete the free DOC Tongariro Visitor Booking registration online before setting out."
+        ],
+        "overnight_campsite": {
+            "name": "Ohakune Top 10 Holiday Park",
+            "category": "holiday_park",
+            "region": "Ruapehu / Tongariro",
+            "powered_site_available": True,
+            "nightly_rate_nzd": 68.0,
+            "amenities": ["Hot Spa Pool", "240V Power", "Laundry", "Dump Station", "Camp Kitchen"],
+            "booking_advice_december": "Book the private hot tub slot in advance to soothe tired hiking legs!"
+        },
+        "december_weather_note": "16°C valley / 5°C alpine summit; pack windproof shell, fleece, beanie, and 3L water.",
+        "photos": [
+            {
+                "title": "Emerald Lakes on the Tongariro Alpine Crossing",
+                "url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80",
+                "credit": "Unsplash / Tongariro National Park",
+                "location_tag": "Tongariro Alpine Crossing"
+            }
+        ],
+        "videos": [
+            {
+                "title": "Hiking the Tongariro Alpine Crossing (Full Trail Guide)",
+                "youtube_id": "Q1w8eR5tY3U",
+                "embed_url": "https://www.youtube-nocookie.com/embed/Q1w8eR5tY3U",
+                "watch_url": "https://www.youtube.com/watch?v=Q1w8eR5tY3U",
+                "duration_label": "10:15"
+            }
+        ]
+    },
+    {
+        "day_number": 12,
+        "date_label": "Dec 12",
+        "island": "North Island",
+        "title": "Kapiti Coast to Wellington: Te Papa, Cable Car & Cuba Street",
+        "start_location": "Ohakune",
+        "end_location": "Wellington Harbour",
+        "latitude": -41.2865,
+        "longitude": 174.7762,
+        "drive_distance_km": 285,
+        "drive_duration_hours": 3.8,
+        "summary": "Descend from the Central Plateau through the Rangitikei River canyons and along the sunny Kapiti Coast into New Zealand's vibrant capital, Wellington ('Te Whanganui-a-Tara'). Explore the world-class Museum of New Zealand Te Papa Tongarewa, ride the red Wellington Cable Car, and dine along bohemian Cuba Street.",
+        "must_do_highlights": [
+            "Tour the Gallipoli: The Scale of Our War exhibition (created with Weta Workshop) at Te Papa Museum (free entry).",
+            "Ride the historic Wellington Cable Car to Kelburn Lookout and stroll down through the Botanic Garden.",
+            "Experience Weta Workshop Unleashed or evening bird-spotting at Zealandia Ecosanctuary."
+        ],
+        "places_to_check_out": [
+            "Museum of New Zealand Te Papa Tongarewa",
+            "Cuba Street Coffee Roasters & Night Market",
+            "Mount Victoria Lookout at sunset"
+        ],
+        "noteworthy_campervan_tips": [
+            "Barnett Street Carpark right next to Te Papa has dedicated oversized motorhome spaces or stay at Evans Bay Marina (certified self-contained freedom camping) / Cuba Street motorhome park.",
+            "Confirm your Cook Strait ferry check-in time for tomorrow morning (arrive 60+ minutes before sailing)."
+        ],
+        "overnight_campsite": {
+            "name": "Wellington Waterfront / Evans Bay Marina Motorhome Park",
+            "category": "freedom_camping",
+            "region": "Wellington City",
+            "powered_site_available": False,
+            "nightly_rate_nzd": 0.0,
+            "amenities": ["Certified Self-Contained Only", "Harbour Views", "Public Toilets Nearby"],
+            "booking_advice_december": "Arrive before 3:00 PM for a bay at Evans Bay Marina, or book Wellington Top 10 Holiday Park (Lower Hutt) if you prefer 240V power."
+        },
+        "december_weather_note": "20°C high / 13°C low; breezy harbour conditions and long summer twilight until 9:00 PM.",
+        "photos": [
+            {
+                "title": "Wellington Harbour & Oriental Bay at Dusk",
+                "url": "https://images.unsplash.com/photo-1589871973318-9ca1258faa5d?auto=format&fit=crop&w=1200&q=80",
+                "credit": "Unsplash / Wellington NZ",
+                "location_tag": "Wellington"
+            }
+        ],
+        "videos": [
+            {
+                "title": "Wellington Top Sights: Te Papa, Cable Car & Weta Workshop",
+                "youtube_id": "Z6x3cV8bN1M",
+                "embed_url": "https://www.youtube-nocookie.com/embed/Z6x3cV8bN1M",
+                "watch_url": "https://www.youtube.com/watch?v=Z6x3cV8bN1M",
+                "duration_label": "7:40"
+            }
+        ]
+    },
+    {
+        "day_number": 13,
+        "date_label": "Dec 13",
+        "island": "Cook Strait & Marlborough",
+        "title": "Cook Strait Ferry Crossing to the South Island & Marlborough Vineyard Cycling",
+        "start_location": "Wellington Ferry Terminal",
+        "end_location": "Picton / Blenheim (Marlborough)",
+        "latitude": -41.2930,
+        "longitude": 174.0019,
+        "drive_distance_km": 35,
+        "drive_duration_hours": 0.6,
+        "summary": "Board the Cook Strait Ferry (Interislander or BlueBridge) with your campervan for one of the most scenic 3.5-hour maritime voyages on Earth. Sail out of Wellington Harbour, cross Cook Strait, and glide through the emerald-forested fjords of Queen Charlotte Sound into Picton on the South Island (Te Waipounamu), followed by an afternoon cycling among Marlborough Sauvignon Blanc vineyards.",
+        "must_do_highlights": [
+            "Stand on the upper observation deck as the ferry enters Tory Channel and Queen Charlotte Sound.",
+            "Disembark in Picton and drive 25 minutes to Blenheim's Golden Mile for a flat afternoon bike tour of cellar doors.",
+            "Walk the Snout Track or Bob's Bay trail overlooking Picton Harbour."
+        ],
+        "places_to_check_out": [
+            "Queen Charlotte Sound / Totaranui",
+            "Cloudy Bay & Allan Scott Vineyards (Blenheim)",
+            "Omaka Aviation Heritage Centre (Sir Peter Jackson's WWI/WWII collection)"
+        ],
+        "noteworthy_campervan_tips": [
+            "MARITIME LAW: You MUST turn off your campervan LPG gas bottle valve completely before driving onto the Cook Strait Ferry; staff will inspect the gas locker at check-in.",
+            "Book your December campervan ferry slot early (handled with HITL confirmation via `reserve_cook_strait_campervan_ferry`)."
+        ],
+        "overnight_campsite": {
+            "name": "Picton Top 10 Holiday Park",
+            "category": "holiday_park",
+            "region": "Marlborough Sounds",
+            "powered_site_available": True,
+            "nightly_rate_nzd": 75.0,
+            "amenities": ["240V Power", "Heated Swimming Pool", "Dump Station", "Hot Showers", "BBQ"],
+            "booking_advice_december": "5 minutes from the Picton ferry terminal and Queen Charlotte waterfront."
+        },
+        "december_weather_note": "24°C high / 12°C low; Marlborough is consistently one of New Zealand's sunniest regions.",
+        "photos": [
+            {
+                "title": "Sailing Through the Marlborough Sounds into Picton",
+                "url": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80",
+                "credit": "Unsplash / Marlborough Sounds",
+                "location_tag": "Queen Charlotte Sound"
+            }
+        ],
+        "videos": [
+            {
+                "title": "Crossing Cook Strait by Campervan Ferry (Wellington to Picton)",
+                "youtube_id": "B4n7mK9pL2X",
+                "embed_url": "https://www.youtube-nocookie.com/embed/B4n7mK9pL2X",
+                "watch_url": "https://www.youtube.com/watch?v=B4n7mK9pL2X",
+                "duration_label": "8:10"
+            }
+        ]
+    },
+    {
+        "day_number": 14,
+        "date_label": "Dec 14",
+        "island": "South Island",
+        "title": "Queen Charlotte Drive to Sunny Nelson & Kaiteriteri Golden Sands",
+        "start_location": "Picton",
+        "end_location": "Kaiteriteri / Marahau (Abel Tasman Gateway)",
+        "latitude": -41.0396,
+        "longitude": 173.0169,
+        "drive_distance_km": 170,
+        "drive_duration_hours": 3.0,
+        "summary": "Trace the winding clifftop Queen Charlotte Drive via Havelock (Green-Lipped Mussel capital of the world) and sunny Nelson to the golden granite bays of Kaiteriteri at the doorstep of Abel Tasman National Park.",
+        "must_do_highlights": [
+            "Stop at Cullen Point Lookout on Queen Charlotte Drive for views over Mahau Sound.",
+            "Lunch on fresh steamed Green-Lipped Mussels at The Mussel Pot in Havelock.",
+            "Swim at Kaiteriteri Lagoon and view Split Apple Rock (Tokangawha) along the coast."
+        ],
+        "places_to_check_out": [
+            "Queen Charlotte Drive Lookouts",
+            "Centre of New Zealand Monument & Founders Park in Nelson",
+            "Split Apple Rock Beach (Kaiteriteri)"
+        ],
+        "noteworthy_campervan_tips": [
+            "If you prefer a wider highway over the winding 35 km Queen Charlotte Drive, take State Highway 1 to Blenheim and SH6 via Rai Valley.",
+            "Stock up on food and groceries in Motueka before arriving in Kaiteriteri/Marahau."
+        ],
+        "overnight_campsite": {
+            "name": "Kaiteriteri Recreation Reserve Campground",
+            "category": "holiday_park",
+            "region": "Tasman / Abel Tasman",
+            "powered_site_available": True,
+            "nightly_rate_nzd": 76.0,
+            "amenities": ["240V Power", "Water Taxi Pier Access", "Dump Station", "Beachfront Restaurant"],
+            "booking_advice_december": "Water taxis for Abel Tasman National Park depart directly from the beach in front of the camp."
+        },
+        "december_weather_note": "24°C high / 13°C low; calm turquoise bays and golden silica-granite beaches.",
+        "photos": [
+            {
+                "title": "Golden Granite Bays of Kaiteriteri & Abel Tasman",
+                "url": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+                "credit": "Unsplash / Tasman Bay",
+                "location_tag": "Kaiteriteri"
+            }
+        ],
+        "videos": [
+            {
+                "title": "Queen Charlotte Drive to Kaiteriteri & Split Apple Rock",
+                "youtube_id": "D8v2kM4nP6R",
+                "embed_url": "https://www.youtube-nocookie.com/embed/D8v2kM4nP6R",
+                "watch_url": "https://www.youtube.com/watch?v=D8v2kM4nP6R",
+                "duration_label": "6:55"
+            }
+        ]
+    },
+    {
+        "day_number": 15,
+        "date_label": "Dec 15",
+        "island": "South Island",
+        "title": "Abel Tasman National Park: Water Taxi, Bark Bay & Cleopatra's Pool",
+        "start_location": "Kaiteriteri / Marahau",
+        "end_location": "Marahau, Abel Tasman National Park",
+        "latitude": -40.9961,
+        "longitude": 173.0052,
+        "drive_distance_km": 12,
+        "drive_duration_hours": 0.3,
+        "summary": "Leave the campervan parked for the day and explore New Zealand's coastal paradise. Ride an amphibious water taxi past Adele Island fur seal colonies to Bark Bay (Medlands Beach) and hike south on the Abel Tasman Coast Track across the Falls River swingbridge to Anchorage, cooling off in the natural moss-lined rock waterslide of Cleopatra's Pool.",
+        "must_do_highlights": [
+            "Morning water taxi cruise past Kekeno (New Zealand fur seals) on Adele Island to Bark Bay.",
+            "Hike the 12.4 km coastal rainforest section from Bark Bay to Anchorage via the 47m Falls River suspension bridge.",
+            "Swim in Cleopatra's Pool on the Torrent River before taking the afternoon water taxi back."
+        ],
+        "places_to_check_out": [
+            "Bark Bay & Medlands Beach",
+            "Falls River Suspension Bridge",
+            "Cleopatra's Pool & Anchorage Bay"
+        ],
+        "noteworthy_campervan_tips": [
+            "Enjoy a zero-driving rest day for your campervan while charging all electronics on shore power."
+        ],
+        "overnight_campsite": {
+            "name": "The Barn Cabins & Campgrounds (Marahau)",
+            "category": "holiday_park",
+            "region": "Abel Tasman National Park",
+            "powered_site_available": True,
+            "nightly_rate_nzd": 68.0,
+            "amenities": ["240V Power", "Right at Abel Tasman Track Start", "Hot Showers", "Outdoor Cinema"],
+            "booking_advice_december": "Located right at the southern trailhead of the Abel Tasman Coast Track."
+        },
+        "december_weather_note": "24°C high / 13°C low; pack reef-safe sunscreen, insect repellent, and swimwear.",
+        "photos": [
+            {
+                "title": "Turquoise Lagoon & Golden Sands of Abel Tasman Coast Track",
+                "url": "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=1200&q=80",
+                "credit": "Unsplash / Abel Tasman",
+                "location_tag": "Abel Tasman National Park"
+            }
+        ],
+        "videos": [
+            {
+                "title": "Abel Tasman Coast Track Day Hike & Kayak Adventure",
+                "youtube_id": "F2j9kL4mP8T",
+                "embed_url": "https://www.youtube-nocookie.com/embed/F2j9kL4mP8T",
+                "watch_url": "https://www.youtube.com/watch?v=F2j9kL4mP8T",
+                "duration_label": "8:50"
+            }
+        ]
+    },
+    {
+        "day_number": 16,
+        "date_label": "Dec 16",
+        "island": "South Island",
+        "title": "Buller Gorge to the Wild West Coast: Cape Foulwind & Punakaiki Pancake Rocks",
+        "start_location": "Marahau (Abel Tasman)",
+        "end_location": "Punakaiki, West Coast",
+        "latitude": -42.1145,
+        "longitude": 171.3268,
+        "drive_distance_km": 275,
+        "drive_duration_hours": 3.9,
+        "summary": "Cross the Kahurangi mountain ranges and follow the emerald Buller River through the dramatic Buller Gorge to the untamed Tasman Sea coast. Visit the Cape Foulwind fur seal colony before driving the Great Coast Road—ranked among the top 10 coastal drives in the world—to the 30-million-year-old limestone Pancake Rocks and Blowholes at Punakaiki.",
+        "must_do_highlights": [
+            "Walk New Zealand's longest swingbridge (110m) over the Buller Gorge.",
+            "Observe wild fur seals and pups at Tauranga Bay / Cape Foulwind Walkway.",
+            "Time your visit to Punakaiki Pancake Rocks & Blowholes with high tide to see booming vertical ocean geysers."
+        ],
+        "places_to_check_out": [
+            "Punakaiki Pancake Rocks & Blowholes (Dolomite Point)",
+            "Truman Track (15-minute rainforest walk to a hidden waterfall cove)",
+            "Pororari River Gorge nikau-palm canyon walk"
+        ],
+        "noteworthy_campervan_tips": [
+            "Fuel and supermarket prices are much lower in Westport than in tiny Punakaiki—fill your tank and pantry in Westport."
+        ],
+        "overnight_campsite": {
+            "name": "Punakaiki Beach Camp",
+            "category": "holiday_park",
+            "region": "West Coast / Paparoa National Park",
+            "powered_site_available": True,
+            "nightly_rate_nzd": 65.0,
+            "amenities": ["240V Power", "Under Limestone Cliffs", "Hot Showers", "Camp Kitchen", "Wi-Fi"],
+            "booking_advice_december": "Walking distance to both the Pororari River track and the Pancake Rocks."
+        },
+        "december_weather_note": "20°C high / 11°C low; dramatic Tasman Sea surf and glowing west-coast sunsets.",
+        "photos": [
+            {
+                "title": "Punakaiki Limestone Pancake Rocks & Tasman Surf",
+                "url": "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=1200&q=80",
+                "credit": "Unsplash / West Coast NZ",
+                "location_tag": "Punakaiki"
+            }
+        ],
+        "videos": [
+            {
+                "title": "Driving the Great Coast Road to Punakaiki Pancake Rocks",
+                "youtube_id": "G5h8jK2lN9P",
+                "embed_url": "https://www.youtube-nocookie.com/embed/G5h8jK2lN9P",
+                "watch_url": "https://www.youtube.com/watch?v=G5h8jK2lN9P",
+                "duration_label": "7:30"
+            }
+        ]
+    },
+    {
+        "day_number": 17,
+        "date_label": "Dec 17",
+        "island": "South Island",
+        "title": "Turquoise Hokitika Gorge & Temperate Rainforest Glaciers (Franz Josef & Fox)",
+        "start_location": "Punakaiki",
+        "end_location": "Franz Josef / Fox Glacier",
+        "latitude": -43.3891,
+        "longitude": 170.1833,
+        "drive_distance_km": 220,
+        "drive_duration_hours": 3.2,
+        "summary": "Follow State Highway 6 south along the Tasman coast to Hokitika, famous for Pounamu (greenstone) carving studios and the surreal milky-blue glacial waters of Hokitika Gorge. Continue south into Westland Tai Poutini National Park, where Franz Josef (Ka Roimata o Hine Hukatere) and Fox Glaciers descend from the Southern Alps into lush temperate rainforest.",
+        "must_do_highlights": [
+            "Cross the two suspension bridges over the electric-turquoise waters of Hokitika Gorge.",
+            "Hike the Franz Josef Glacier Valley Walk (1.5 hrs return) to the terminal viewpoint.",
+            "Optional twin-glacier scenic flight with snow landing at the head of Franz Josef or Fox Glacier."
+        ],
+        "places_to_check_out": [
+            "Hokitika Gorge Scenic Reserve",
+            "Franz Josef Glacier Valley & Peters Pool",
+            "West Coast Wildlife Centre (Rowi Kiwi conservation)"
+        ],
+        "noteworthy_campervan_tips": [
+            "Watch for single-lane bridges on State Highway 6 (including the combined road-rail bridge south of Greymouth); check the red arrow on road signs for who has right-of-way.",
+            "Pack natural citronella/picaridin insect repellent for West Coast sandflies ('Te Namu')."
+        ],
+        "overnight_campsite": {
+            "name": "Rainforest Retreat Holiday Park (Franz Josef)",
+            "category": "holiday_park",
+            "region": "Glacier Country, West Coast",
+            "powered_site_available": True,
+            "nightly_rate_nzd": 78.0,
+            "amenities": ["240V Power", "Hot Spa & Sauna", "On-site Monsoon Bar", "Dump Station", "Drying Room"],
+            "booking_advice_december": "Sheltered rainforest bays with heated amenities right in Franz Josef village."
+        },
+        "december_weather_note": "19°C high / 10°C low; clearest skies for glacier views are typically between 7:00 AM and 10:00 AM.",
+        "photos": [
+            {
+                "title": "Franz Josef Glacier Descending into Westland Rainforest",
+                "url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80",
+                "credit": "Unsplash / Westland Tai Poutini",
+                "location_tag": "Franz Josef Glacier"
+            }
+        ],
+        "videos": [
+            {
+                "title": "Hokitika Gorge & Franz Josef Glacier Heli-Hike",
+                "youtube_id": "N7m3kL8pQ2W",
+                "embed_url": "https://www.youtube-nocookie.com/embed/N7m3kL8pQ2W",
+                "watch_url": "https://www.youtube.com/watch?v=N7m3kL8pQ2W",
+                "duration_label": "8:45"
+            }
+        ]
+    },
+    {
+        "day_number": 18,
+        "date_label": "Dec 18",
+        "island": "South Island",
+        "title": "Lake Matheson Mirror Views & Haast Pass Waterfall Highway to Wanaka",
+        "start_location": "Franz Josef / Fox Glacier",
+        "end_location": "Wanaka",
+        "latitude": -44.7032,
+        "longitude": 169.1321,
+        "drive_distance_km": 285,
+        "drive_duration_hours": 3.9,
+        "summary": "Begin at dawn with a walk around dark-tannin Lake Matheson for mirror reflections of Aoraki / Mount Cook and Mount Tasman. Then climb over the Southern Alps via the spectacular Haast Pass (Tioripatea), stopping at Thunder Creek Falls, Fantail Falls, and the vivid Blue Pools before emerging beside the twin glacial lakes of Hawea and Wanaka.",
+        "must_do_highlights": [
+            "Sunrise walk to the Jetty Viewpoint at Lake Matheson near Fox Glacier.",
+            "Stop at Thunder Creek Falls (28m waterfall) and the crystal-clear Blue Pools in Mount Aspiring National Park.",
+            "Photograph #ThatWanakaTree at sunset along the shores of Lake Wanaka surrounded by purple December Russell Lupins."
+        ],
+        "places_to_check_out": [
+            "Lake Matheson Reflection Loop",
+            "Blue Pools & Haast Pass Lookouts",
+            "Lake Hawea Neck Lookout & #ThatWanakaTree"
+        ],
+        "noteworthy_campervan_tips": [
+            "Check NZTA check-in boards at Haast Junction; the Gates of Haast bridge is single-lane with tight rock overhangs.",
+            "Fuel up in Fox Glacier or Haast before crossing the pass to Wanaka."
+        ],
+        "overnight_campsite": {
+            "name": "Wanaka Lakeview Holiday Park",
+            "category": "holiday_park",
+            "region": "Otago / Lake Wanaka",
+            "powered_site_available": True,
+            "nightly_rate_nzd": 76.0,
+            "amenities": ["240V Power", "5-Min Walk to Lakefront", "Dump Station", "Hot Showers", "Laundry"],
+            "booking_advice_december": "Easy walk to Wanaka lakefront cafes and New World supermarket."
+        },
+        "december_weather_note": "23°C high / 10°C low; dry alpine sunshine and vibrant purple/pink lupin blooms along lake shores.",
+        "photos": [
+            {
+                "title": "Lake Wanaka & Southern Alps in Early Summer",
+                "url": "https://images.unsplash.com/photo-1507699622108-4be3abd695ad?auto=format&fit=crop&w=1200&q=80",
+                "credit": "Unsplash / Lake Wanaka",
+                "location_tag": "Wanaka"
+            }
+        ],
+        "videos": [
+            {
+                "title": "Haast Pass Waterfalls to Lake Wanaka Campervan Drive",
+                "youtube_id": "R2t5yU8iO1P",
+                "embed_url": "https://www.youtube-nocookie.com/embed/R2t5yU8iO1P",
+                "watch_url": "https://www.youtube.com/watch?v=R2t5yU8iO1P",
+                "duration_label": "9:05"
+            }
+        ]
+    },
+    {
+        "day_number": 19,
+        "date_label": "Dec 19",
+        "island": "South Island",
+        "title": "Roys Peak / Rob Roy Glacier Hike, Historic Arrowtown & Arrival in Queenstown",
+        "start_location": "Wanaka",
+        "end_location": "Queenstown",
+        "latitude": -45.0312,
+        "longitude": 168.6626,
+        "drive_distance_km": 115,
+        "drive_duration_hours": 1.8,
+        "summary": "Spend the morning hiking either the panoramic Roys Peak Track (reopens Nov 16 after lambing closure!) or the stunning Rob Roy Glacier Track in Mount Aspiring National Park. Drive via the historic gold-mining village of Arrowtown and Kawarau Gorge Bungy Bridge into alpine Queenstown on Lake Wakatipu.",
+        "must_do_highlights": [
+            "Morning hike up Roys Peak (or Mount Iron / Diamond Lake for a shorter 2-hour panoramic alternative).",
+            "Stroll Buckingham Street and the historic Chinese Settlement in Arrowtown.",
+            "Watch bungy jumpers at the historic Kawarau Suspension Bridge before arriving in Queenstown."
+        ],
+        "places_to_check_out": [
+            "Roys Peak / Diamond Lake & Rocky Mountain Track (Wanaka)",
+            "Arrowtown Bakery (famous venison and boysenberry pies)",
+            "Queenstown Gardens & Lake Wakatipu Steamer Wharf"
+        ],
+        "noteworthy_campervan_tips": [
+            "IMPORTANT: Most rental campervan insurance policies prohibit driving the steep Crown Range Road (zig-zag hairpins); take the fully approved, scenic State Highway 6 through Cromwell and the Kawarau Gorge instead!"
+        ],
+        "overnight_campsite": {
+            "name": "Queenstown Lakeview Holiday Park (or Driftaway Queenstown)",
+            "category": "holiday_park",
+            "region": "Queenstown / Lake Wakatipu",
+            "powered_site_available": True,
+            "nightly_rate_nzd": 88.0,
+            "amenities": ["240V Power", "Lakefront Hot Tubs (Driftaway)", "Dump Station", "Underfloor Heated Bathrooms"],
+            "booking_advice_december": "Book 2 consecutive nights in Queenstown so you never have to hunt for downtown parking."
+        },
+        "december_weather_note": "22°C high / 9°C low; crisp alpine mornings and golden twilight past 9:15 PM.",
+        "photos": [
+            {
+                "title": "Panoramic View Over Lake Wanaka & Southern Alps from Roys Peak",
+                "url": "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1200&q=80",
+                "credit": "Unsplash / Otago Alps",
+                "location_tag": "Roys Peak & Queenstown"
+            }
+        ],
+        "videos": [
+            {
+                "title": "Wanaka to Queenstown via Arrowtown & Kawarau Gorge",
+                "youtube_id": "V9b4nM7kL3Q",
+                "embed_url": "https://www.youtube-nocookie.com/embed/V9b4nM7kL3Q",
+                "watch_url": "https://www.youtube.com/watch?v=V9b4nM7kL3Q",
+                "duration_label": "8:30"
+            }
+        ]
+    },
+    {
+        "day_number": 20,
+        "date_label": "Dec 20",
+        "island": "South Island",
+        "title": "Queenstown Alpine Adventures: Glenorchy Paradise Road, Skyline Gondola & TSS Earnslaw",
+        "start_location": "Queenstown",
+        "end_location": "Te Anau (Fiordland Gateway)",
+        "latitude": -45.4145,
+        "longitude": 167.7180,
+        "drive_distance_km": 170,
+        "drive_duration_hours": 2.4,
+        "summary": "Experience Queenstown's world-renowned scenery: morning drive or jetboat to Glenorchy at the head of Lake Wakatipu, ride the Skyline Gondola up Bob's Peak for luge runs and Remarkables views, grab a legendary Fergburger, and drive around the Eyre Mountains to lakeside Te Anau—gateway to Fiordland National Park.",
+        "must_do_highlights": [
+            "Ride the Skyline Gondola and Luge overlooking The Remarkables mountain range and Lake Wakatipu.",
+            "Cruise aboard the 1912 coal-fired vintage steamship TSS Earnslaw or jetboat the Shotover River canyons.",
+            "Late-afternoon scenic drive along the Devil's Staircase (SH6) to Lake Te Anau."
+        ],
+        "places_to_check_out": [
+            "Bob's Peak Skyline Lookout & Luge",
+            "Fergburger & Fergbaker on Shotover Street",
+            "Te Anau Glowworm Caves or Fiordland Cinema ('Ata Whenua' film)"
+        ],
+        "noteworthy_campervan_tips": [
+            "MANDATORY: Fill your fuel tank 100% and buy all food in Te Anau tonight—there are no supermarkets and limited emergency fuel along the 120 km Milford Road tomorrow."
+        ],
+        "overnight_campsite": {
+            "name": "Tasman Holiday Parks - Te Anau",
+            "category": "holiday_park",
+            "region": "Fiordland / Lake Te Anau",
+            "powered_site_available": True,
+            "nightly_rate_nzd": 74.0,
+            "amenities": ["240V Power", "Lakefront Pitches", "Hot Tub", "Dump Station", "Camp Kitchen"],
+            "booking_advice_december": "Right on the shore of Lake Te Anau; gives you a 2.5-hour head start to Milford Sound tomorrow."
+        },
+        "december_weather_note": "20°C high / 8°C low; long summer evenings perfect for walking the Lake Te Anau shoreline.",
+        "photos": [
+            {
+                "title": "Lake Wakatipu & The Remarkables from Bob's Peak, Queenstown",
+                "url": "https://images.unsplash.com/photo-1507699622108-4be3abd695ad?auto=format&fit=crop&w=1200&q=80",
+                "credit": "Unsplash / Queenstown NZ",
+                "location_tag": "Queenstown"
+            }
+        ],
+        "videos": [
+            {
+                "title": "Queenstown Ultimate Guide & Drive to Te Anau",
+                "youtube_id": "X3c6vB9nM1K",
+                "embed_url": "https://www.youtube-nocookie.com/embed/X3c6vB9nM1K",
+                "watch_url": "https://www.youtube.com/watch?v=X3c6vB9nM1K",
+                "duration_label": "9:50"
+            }
+        ]
+    },
+    {
+        "day_number": 21,
+        "date_label": "Dec 21",
+        "island": "South Island",
+        "title": "The Eighth Wonder of the World: Milford Highway, Homer Tunnel & Milford Sound Cruise",
+        "start_location": "Te Anau",
+        "end_location": "Milford Sound / Cascade Creek (Fiordland)",
+        "latitude": -44.6716,
+        "longitude": 167.9256,
+        "drive_distance_km": 165,
+        "drive_duration_hours": 3.0,
+        "summary": "Drive the legendary Milford Road (State Highway 94) deep into UNESCO World Heritage Fiordland National Park. Stop at Eglinton Valley, Mirror Lakes, Monkey Creek (spot cheeky alpine Kea parrots!), and drive through the 1.2 km solid-granite Homer Tunnel before boarding a 2-hour nature cruise beneath 1,692m Mitre Peak and booming Stirling and Bowen Falls in Milford Sound (Piopiotahi).",
+        "must_do_highlights": [
+            "Stop at Eglinton Valley, Mirror Lakes, Lake Marian Falls boardwalk, and Monkey Creek along the Milford Highway.",
+            "2-hour small-boat Fiordland nature cruise out to the Tasman Sea past Mitre Peak, cascading waterfalls, and Bottlenose dolphins.",
+            "Walk the Milford Foreshore Loop for iconic reflection photos of Mitre Peak."
+        ],
+        "places_to_check_out": [
+            "Milford Sound (Piopiotahi) & Mitre Peak",
+            "Mirror Lakes & Eglinton Valley",
+            "The Chasm & Monkey Creek (watch for Kea alpine parrots!)"
+        ],
+        "noteworthy_campervan_tips": [
+            "Leave Te Anau by 6:30 AM to beat tour buses and enjoy quiet viewpoints along SH94.",
+            "NEVER feed Kea parrots—and keep rubber campervan roof seals and wiper blades supervised when parked at Monkey Creek!",
+            "Book Milford Sound Lodge Rainforest Campervan Park in advance (via `book_paid_holiday_park_site` HITL tool) or camp at DOC Cascade Creek."
+        ],
+        "overnight_campsite": {
+            "name": "Milford Sound Lodge Rainforest Campervan Park (or Cascade Creek DOC)",
+            "category": "holiday_park",
+            "region": "Fiordland National Park",
+            "powered_site_available": True,
+            "nightly_rate_nzd": 120.0,
+            "amenities": ["240V Power", "Gourmet Pio Pio Restaurant", "Hot Showers", "Guest Lounge"],
+            "booking_advice_december": "The ONLY powered campervan park inside Milford Sound; Cascade Creek DOC site ($20/pp) is 45 mins back up the valley."
+        },
+        "december_weather_note": "18°C high / 7°C low; Dec 21 is the Southern Hemisphere Summer Solstice (~15.7 hours of daylight!). Rain makes Milford Sound even more spectacular with hundreds of temporary waterfalls.",
+        "photos": [
+            {
+                "title": "Mitre Peak Rising 1,692m Above Milford Sound (Piopiotahi)",
+                "url": "https://images.unsplash.com/photo-1469521669194-babb45599def?auto=format&fit=crop&w=1200&q=80",
+                "credit": "Unsplash / Fiordland National Park",
+                "location_tag": "Milford Sound"
+            }
+        ],
+        "videos": [
+            {
+                "title": "Driving the Milford Road & Cruising Milford Sound in 4K",
+                "youtube_id": "Y7u2iO5pA8S",
+                "embed_url": "https://www.youtube-nocookie.com/embed/Y7u2iO5pA8S",
+                "watch_url": "https://www.youtube.com/watch?v=Y7u2iO5pA8S",
+                "duration_label": "11:10"
+            }
+        ]
+    },
+    {
+        "day_number": 22,
+        "date_label": "Dec 22",
+        "island": "South Island",
+        "title": "Southernmost Tip of the South Island: Bluff Stirling Point & Slope Point",
+        "start_location": "Cascade Creek / Te Anau",
+        "end_location": "Curio Bay (The Catlins)",
+        "latitude": -46.6611,
+        "longitude": 169.1030,
+        "drive_distance_km": 285,
+        "drive_duration_hours": 4.1,
+        "summary": "Complete the north-to-south extremity of your New Zealand Odyssey! Follow the Southern Scenic Route past the turquoise Waiau River and Gemstone Beach to Bluff's famous Stirling Point Signpost (the southern terminus of State Highway 1), then continue into the Southern Catlins to stand at Slope Point (46°40'S)—the geographical southernmost tip of the South Island, just 4,803 km from the South Pole!",
+        "must_do_highlights": [
+            "Take your celebratory photo at the iconic Stirling Point Signpost in Bluff—marking the full length of SH1 from Cape Reinga to Bluff!",
+            "Walk 20 minutes across coastal farmland to the yellow signpost at Slope Point—the absolute southernmost point of the South Island, where Roaring Forties winds sculpt horizontal macrocarpa trees.",
+            "Spot endangered Yellow-Eyed Penguins (Hoiho) coming ashore at dusk on the 180-million-year-old Jurassic Petrified Forest ledges at Curio Bay, and swim alongside tiny Hector's Dolphins in Porpoise Bay."
+        ],
+        "places_to_check_out": [
+            "Stirling Point Signpost & Bluff Hill Lookout (views across Foveaux Strait to Stewart Island / Rakiura)",
+            "Slope Point (Southernmost Point of the South Island, 46°40'40\"S)",
+            "Curio Bay Jurassic Petrified Forest & Porpoise Bay"
+        ],
+        "noteworthy_campervan_tips": [
+            "All roads to Bluff, Fortrose, Slope Point, and Curio Bay are now 100% sealed tar-seal—safe and approved for all rental campervans!",
+            "Give penguins at Curio Bay at least 50 meters of space and never use flash photography."
+        ],
+        "overnight_campsite": {
+            "name": "Curio Bay Natural Heritage Campground",
+            "category": "holiday_park",
+            "region": "The Catlins / Southland",
+            "powered_site_available": True,
+            "nightly_rate_nzd": 62.0,
+            "amenities": ["240V Power", "Cliff-top Flax-Sheltered Bays", "Hot Showers", "Interpretive Centre"],
+            "booking_advice_december": "Tucked into native flax bushes right between Porpoise Bay and the Curio Bay Petrified Forest."
+        },
+        "december_weather_note": "18°C high / 9°C low; longest twilight in New Zealand—still light at 10:00 PM in late December!",
+        "photos": [
+            {
+                "title": "Wind-Sculpted Cliffs at Slope Point & The Catlins Southern Coast",
+                "url": "https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1200&q=80",
+                "credit": "Unsplash / Southland & Catlins",
+                "location_tag": "Bluff & Slope Point"
+            }
+        ],
+        "videos": [
+            {
+                "title": "Bluff Stirling Point, Slope Point (Southern Tip) & Curio Bay Catlins",
+                "youtube_id": "M1n4bV7cX9Z",
+                "embed_url": "https://www.youtube-nocookie.com/embed/M1n4bV7cX9Z",
+                "watch_url": "https://www.youtube.com/watch?v=M1n4bV7cX9Z",
+                "duration_label": "9:25"
+            }
+        ]
+    },
+    {
+        "day_number": 23,
+        "date_label": "Dec 23",
+        "island": "South Island",
+        "title": "The Catlins Waterfalls & Cathedral Caves to Otago Peninsula Wildlife",
+        "start_location": "Curio Bay (The Catlins)",
+        "end_location": "Dunedin & Otago Peninsula",
+        "latitude": -45.8788,
+        "longitude": 170.5028,
+        "drive_distance_km": 215,
+        "drive_duration_hours": 3.3,
+        "summary": "Wind northeast along the wild Catlins Southern Scenic Route. Hike through ancient podocarp forest to the three-tiered Purakaunui Falls, walk out to the dramatic cliff-edge lighthouse at Nugget Point (Tokata) to watch fur seals and sea lions below, and arrive in historic Dunedin and the Otago Peninsula.",
+        "must_do_highlights": [
+            "Photograph the iconic three-tiered cascade of Purakaunui Falls and McLean Falls.",
+            "Walk the dramatic clifftop track to Nugget Point Lighthouse (Tokata) overlooking sea-stack 'nuggets'.",
+            "Visit the Royal Albatross Centre at Taiaroa Head on the Otago Peninsula—the world's only mainland breeding colony of Northern Royal Albatross."
+        ],
+        "places_to_check_out": [
+            "McLean Falls & Purakaunui Falls (The Catlins)",
+            "Nugget Point Lighthouse & Roaring Bay",
+            "Dunedin Railway Station, Larnach Castle & Taiaroa Head Albatross Colony"
+        ],
+        "noteworthy_campervan_tips": [
+            "Portobello Road along the Otago Harbour waterfront has been widened with a dedicated coastal boardwalk, but drive slowly and enjoy the bay views.",
+            "Do NOT attempt to drive a 7.2m campervan up Baldwin Street (world's steepest street)—park on North Road at the bottom and walk up!"
+        ],
+        "overnight_campsite": {
+            "name": "Portobello Village Tourist Park (or Dunedin Holiday Park)",
+            "category": "holiday_park",
+            "region": "Otago Peninsula / Dunedin",
+            "powered_site_available": True,
+            "nightly_rate_nzd": 68.0,
+            "amenities": ["240V Power", "Dump Station", "Hot Showers", "Close to Albatross Colony", "Laundry"],
+            "booking_advice_december": "Great base on the Otago Peninsula just 15 minutes from Taiaroa Head."
+        },
+        "december_weather_note": "19°C high / 10°C low; coastal breezes ideal for watching giant 3-meter-wingspan Royal Albatross soar.",
+        "photos": [
+            {
+                "title": "Nugget Point Lighthouse Above the Southern Ocean",
+                "url": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+                "credit": "Unsplash / Catlins & Otago Coast",
+                "location_tag": "Nugget Point & Dunedin"
+            }
+        ],
+        "videos": [
+            {
+                "title": "The Catlins Waterfalls, Nugget Point & Otago Peninsula Wildlife",
+                "youtube_id": "K4l7jH2gF5D",
+                "embed_url": "https://www.youtube-nocookie.com/embed/K4l7jH2gF5D",
+                "watch_url": "https://www.youtube.com/watch?v=K4l7jH2gF5D",
+                "duration_label": "8:55"
+            }
+        ]
+    },
+    {
+        "day_number": 24,
+        "date_label": "Dec 24",
+        "island": "South Island",
+        "title": "Moeraki Boulders, Oamaru Victorian Quarter & Drive to Aoraki / Mount Cook",
+        "start_location": "Dunedin",
+        "end_location": "Aoraki / Mount Cook National Park",
+        "latitude": -43.7340,
+        "longitude": 170.0962,
+        "drive_distance_km": 315,
+        "drive_duration_hours": 4.1,
+        "summary": "Follow the Otago coast north to inspect the mysterious 60-million-year-old spherical septarian concretions of the Moeraki Boulders (Kaihinaki) on Koekohe Beach and stroll Oamaru's white-limestone Victorian Precinct. Then turn inland up the Waitaki Valley and along the neon-turquoise shore of Lake Pukaki into the heart of the Southern Alps beneath 3,724m Aoraki / Mount Cook.",
+        "must_do_highlights": [
+            "Walk among the giant spherical Moeraki Boulders on Koekohe Beach.",
+            "Explore Oamaru's Victorian Precinct and Steampunk HQ, and taste Whitestone Cheese.",
+            "Drive State Highway 80 ('Mount Cook Road') alongside electric-blue Lake Pukaki with Aoraki / Mount Cook towering straight ahead."
+        ],
+        "places_to_check_out": [
+            "Moeraki Boulders Beach",
+            "Lake Pukaki Visitor Centre & Mount Cook Alpine Salmon Shop",
+            "Peter's Lookout on SH80 (iconic winding road photo spot)"
+        ],
+        "noteworthy_campervan_tips": [
+            "Stop at Twizel Four Square supermarket and fuel station before turning onto SH80—Aoraki / Mount Cook Village has no supermarket.",
+            "Pick up fresh sashmi-grade King Salmon at the Lake Pukaki Alpine Salmon kiosk for your Christmas Eve campervan feast!"
+        ],
+        "overnight_campsite": {
+            "name": "White Horse Hill DOC Campground (Aoraki / Mount Cook)",
+            "category": "doc_campsite",
+            "region": "Aoraki / Mount Cook National Park",
+            "powered_site_available": False,
+            "nightly_rate_nzd": 36.0,
+            "amenities": ["Flush Toilets", "Indoor Cooking Shelter", "Drinking Water", "Right at Hooker Valley Trailhead"],
+            "booking_advice_december": "Surrounded on 3 sides by glaciated 3,000m+ peaks right at the Hooker Valley and Mueller Hut trailheads."
+        },
+        "december_weather_note": "20°C daytime / 7°C alpine night; world-renowned Aoraki Mackenzie International Dark Sky Reserve stargazing.",
+        "photos": [
+            {
+                "title": "Aoraki / Mount Cook & Turquoise Lake Pukaki",
+                "url": "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1200&q=80",
+                "credit": "Unsplash / Aoraki Mount Cook",
+                "location_tag": "Aoraki / Mount Cook"
+            }
+        ],
+        "videos": [
+            {
+                "title": "Moeraki Boulders & Driving SH80 to Aoraki / Mount Cook",
+                "youtube_id": "S8d3fG6hJ9K",
+                "embed_url": "https://www.youtube-nocookie.com/embed/S8d3fG6hJ9K",
+                "watch_url": "https://www.youtube.com/watch?v=S8d3fG6hJ9K",
+                "duration_label": "8:15"
+            }
+        ]
+    },
+    {
+        "day_number": 25,
+        "date_label": "Dec 25",
+        "island": "South Island",
+        "title": "Christmas Day in the Southern Alps: Hooker Valley Track & Tasman Glacier Icebergs",
+        "start_location": "White Horse Hill (Aoraki / Mount Cook)",
+        "end_location": "Aoraki / Mount Cook Village",
+        "latitude": -43.7340,
+        "longitude": 170.0962,
+        "drive_distance_km": 18,
+        "drive_duration_hours": 0.4,
+        "summary": "Wake up inside your campervan surrounded by hanging glaciers on Christmas morning! Step directly from White Horse Hill Campground onto the flat, boardwalked Hooker Valley Track across three dramatic swingbridges to the iceberg-dotted Hooker Glacier terminal lake beneath the sheer south face of Aoraki / Mount Cook, then visit the Tasman Glacier viewpoint in the afternoon.",
+        "must_do_highlights": [
+            "Hike the 10 km return Hooker Valley Track (3 hours) across three suspension bridges to Hooker Lake.",
+            "Walk the Blue Lakes & Tasman Glacier View Track (45 mins) overlooking New Zealand's longest glacier (23 km).",
+            "Visit the Sir Edmund Hillary Alpine Centre at The Hermitage Hotel."
+        ],
+        "places_to_check_out": [
+            "Hooker Valley Track & Hooker Glacier Terminal Lake",
+            "Tasman Glacier Viewpoint & Iceberg Boat Tour",
+            "Kea Point Track (1-hour sunset walk to Mueller Glacier moraine wall)"
+        ],
+        "noteworthy_campervan_tips": [
+            "Staying two nights at Aoraki / Mount Cook gives you a completely relax-paced Christmas Day with almost zero driving."
+        ],
+        "overnight_campsite": {
+            "name": "Glentanner Park Centre (or White Horse Hill DOC)",
+            "category": "holiday_park",
+            "region": "Aoraki / Mount Cook / Lake Pukaki",
+            "powered_site_available": True,
+            "nightly_rate_nzd": 68.0,
+            "amenities": ["240V Power", "Hot Showers", "Dump Station", "Campervan Kitchen", "Mt Cook Views"],
+            "booking_advice_december": "Glentanner offers full 240V power and hot showers 18 km down the valley if you want to recharge after a night off-grid."
+        },
+        "december_weather_note": "21°C high / 8°C low; extreme alpine UV exposure off snow and glacial water—wear polarized sunglasses.",
+        "photos": [
+            {
+                "title": "Hooker Valley Boardwalk Leading Toward Aoraki / Mount Cook",
+                "url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80",
+                "credit": "Unsplash / Hooker Valley",
+                "location_tag": "Hooker Valley Track"
+            }
+        ],
+        "videos": [
+            {
+                "title": "Hiking the Hooker Valley Track & Tasman Glacier (4K)",
+                "youtube_id": "P9o2iU5yT7R",
+                "embed_url": "https://www.youtube-nocookie.com/embed/P9o2iU5yT7R",
+                "watch_url": "https://www.youtube.com/watch?v=P9o2iU5yT7R",
+                "duration_label": "9:30"
+            }
+        ]
+    },
+    {
+        "day_number": 26,
+        "date_label": "Dec 26",
+        "island": "South Island",
+        "title": "Lake Tekapo Lupins, Mount John Observatory & Dark Sky Stargazing",
+        "start_location": "Aoraki / Mount Cook",
+        "end_location": "Lake Tekapo",
+        "latitude": -44.0047,
+        "longitude": 170.4771,
+        "drive_distance_km": 105,
+        "drive_duration_hours": 1.4,
+        "summary": "Cruise east across the golden tussock Mackenzie Basin to the vivid milky-turquoise waters of Lake Tekapo, framed by carpets of blooming December Russell Lupins. Visit the stone Church of the Good Shepherd, drive or hike to the summit of Mount John University Observatory for a 360-degree view of the basin, and soak under the Milky Way at Tekapo Springs.",
+        "must_do_highlights": [
+            "Walk the lupin-lined lakeshore around the historic 1935 stone Church of the Good Shepherd.",
+            "Enjoy an Astro-Cafe coffee at the summit of Mount John Observatory overlooking Lake Tekapo and Lake Alexandrina.",
+            "Evening Dark Sky Reserve stargazing tour and hot pool soak at Tekapo Springs."
+        ],
+        "places_to_check_out": [
+            "Church of the Good Shepherd & Sheepdog Memorial",
+            "Mount John University Observatory & Astro Cafe",
+            "Tekapo Springs Hot Pools & Star Gazing"
+        ],
+        "noteworthy_campervan_tips": [
+            "The Mount John summit toll road ($8 vehicle access fee) is open during daytime hours (9:30 AM – 4:30 PM) and easily negotiable by standard campervans."
+        ],
+        "overnight_campsite": {
+            "name": "Lakes Edge Holiday Park (Lake Tekapo)",
+            "category": "holiday_park",
+            "region": "Mackenzie Basin / Lake Tekapo",
+            "powered_site_available": True,
+            "nightly_rate_nzd": 76.0,
+            "amenities": ["240V Power", "Lakeside Forest Setting", "Dump Station", "Hot Showers", "Laundry"],
+            "booking_advice_december": "Right beside Tekapo Springs and the Mount John walkway trailhead."
+        },
+        "december_weather_note": "23°C high / 9°C low; Mackenzie Basin has the clearest night skies in the Southern Hemisphere.",
+        "photos": [
+            {
+                "title": "Blooming December Lupins & Turquoise Waters of Lake Tekapo",
+                "url": "https://images.unsplash.com/photo-1507699622108-4be3abd695ad?auto=format&fit=crop&w=1200&q=80",
+                "credit": "Unsplash / Lake Tekapo",
+                "location_tag": "Lake Tekapo"
+            }
+        ],
+        "videos": [
+            {
+                "title": "Lake Tekapo Lupins, Mount John & Dark Sky Reserve",
+                "youtube_id": "E4r7tY1uI9O",
+                "embed_url": "https://www.youtube-nocookie.com/embed/E4r7tY1uI9O",
+                "watch_url": "https://www.youtube.com/watch?v=E4r7tY1uI9O",
+                "duration_label": "7:15"
+            }
+        ]
+    },
+    {
+        "day_number": 27,
+        "date_label": "Dec 27",
+        "island": "South Island",
+        "title": "Rakaia Gorge Turquoise Canyon & Christchurch Garden City",
+        "start_location": "Lake Tekapo",
+        "end_location": "Christchurch",
+        "latitude": -43.5321,
+        "longitude": 172.6362,
+        "drive_distance_km": 245,
+        "drive_duration_hours": 3.2,
+        "summary": "Descend via Burkes Pass and charming Geraldine (stop for Barker's of Geraldine fruit chutneys and Fairlie Bakehouse pies!), then take the Inland Scenic Route 72 across the Rakaia Gorge bridges into Christchurch ('Otautahi')—New Zealand's vibrant Garden City.",
+        "must_do_highlights": [
+            "Stop at the iconic Fairlie Bakehouse for a gourmet pork-belly or salmon pie.",
+            "Walk the Rakaia Gorge rim lookout over the braided turquoise Rakaia River.",
+            "Punt on the Avon River through the Christchurch Botanic Gardens, ride the heritage tram, and dine at Riverside Market."
+        ],
+        "places_to_check_out": [
+            "Fairlie Bakehouse & Barker's Foodstore in Geraldine",
+            "Rakaia Gorge Bridges & Walkway",
+            "Christchurch Botanic Gardens, Cardboard Cathedral & Riverside Market"
+        ],
+        "noteworthy_campervan_tips": [
+            "Use tonight at the holiday park to pack your bags, empty the grey/black water cassettes at the dump station, and tidy the campervan interior before tomorrow's drop-off."
+        ],
+        "overnight_campsite": {
+            "name": "Tasman Holiday Parks - Christchurch",
+            "category": "holiday_park",
+            "region": "Christchurch",
+            "powered_site_available": True,
+            "nightly_rate_nzd": 75.0,
+            "amenities": ["240V Power", "Indoor Heated Pool", "Easy Dump Station", "12-Min Drive to Airport Depots"],
+            "booking_advice_december": "Conveniently located on Cranford Street with direct bus links to the city center and a 12-minute drive to Christchurch Airport campervan depots."
+        },
+        "december_weather_note": "23°C high / 12°C low; warm Canterbury Nor'wester breeze and blooming rose gardens.",
+        "photos": [
+            {
+                "title": "Christchurch Botanic Gardens & Avon River Punting",
+                "url": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+                "credit": "Unsplash / Canterbury NZ",
+                "location_tag": "Christchurch"
+            }
+        ],
+        "videos": [
+            {
+                "title": "Scenic Route 72 to Christchurch & Riverside Market Tour",
+                "youtube_id": "W2q5eR8tY4U",
+                "embed_url": "https://www.youtube-nocookie.com/embed/W2q5eR8tY4U",
+                "watch_url": "https://www.youtube.com/watch?v=W2q5eR8tY4U",
+                "duration_label": "7:45"
+            }
+        ]
+    },
+    {
+        "day_number": 28,
+        "date_label": "Dec 28",
+        "island": "South Island",
+        "title": "Port Hills Panorama, International Antarctic Centre & Christchurch Departure",
+        "start_location": "Christchurch",
+        "end_location": "Christchurch International Airport (CHC)",
+        "latitude": -43.4864,
+        "longitude": 172.5369,
+        "drive_distance_km": 35,
+        "drive_duration_hours": 0.8,
+        "summary": "Celebrate the grand finale of your 3,945 km, 28-day New Zealand Odyssey! Take a morning drive or gondola ride up the Port Hills overlooking Lyttelton Harbour and the Southern Alps, top up diesel and LPG near Harewood Road, return your campervan at the Christchurch Airport depot, and visit the International Antarctic Centre before boarding your departure flight.",
+        "must_do_highlights": [
+            "Ride the Christchurch Gondola up Mount Cavendish in the Port Hills for views spanning from the Southern Alps to Pegasus Bay.",
+            "Complete smooth campervan drop-off near Christchurch Airport (with full fuel tank, full LPG bottle, and empty waste tanks).",
+            "Visit the International Antarctic Centre (right across from the airport terminal) to see Little Blue Penguins and ride the Hagglund all-terrain vehicle."
+        ],
+        "places_to_check_out": [
+            "Christchurch Gondola & Port Hills Summit Road Lookouts",
+            "Lyttelton Farmers Market / Harbour",
+            "International Antarctic Centre (Christchurch Airport)"
+        ],
+        "noteworthy_campervan_tips": [
+            "Refuel diesel AND refill the LPG gas bottle at the Challenge or Z service stations on Russley Road / Memorial Avenue within 5 km of the Christchurch Airport rental depots.",
+            "Remember to pay your Road User Charges (RUC) per-1,000-km diesel recovery fee at drop-off if not covered by an inclusive rental pack."
+        ],
+        "overnight_campsite": {
+            "name": "Campervan Drop-Off at Christchurch Airport Depot (Departure Day)",
+            "category": "holiday_park",
+            "region": "Christchurch International Airport (CHC)",
+            "powered_site_available": True,
+            "nightly_rate_nzd": 0.0,
+            "amenities": ["Final Dump Station", "LPG Refill Nearby", "Airport Shuttle Transfer"],
+            "booking_advice_december": "Allow 45 minutes at the depot for vehicle inspection and complimentary shuttle transfer to the international terminal."
+        },
+        "december_weather_note": "23°C high / 12°C low; clear summer skies for your flight out over the Southern Alps.",
+        "photos": [
+            {
+                "title": "Port Hills & Lyttelton Harbour Panorama, Christchurch",
+                "url": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1200&q=80",
+                "credit": "Unsplash / Port Hills Christchurch",
+                "location_tag": "Christchurch Airport & Port Hills"
+            }
+        ],
+        "videos": [
+            {
+                "title": "Christchurch Port Hills, Antarctic Centre & Trip Finale",
+                "youtube_id": "A1s4dF7gH2J",
+                "embed_url": "https://www.youtube-nocookie.com/embed/A1s4dF7gH2J",
+                "watch_url": "https://www.youtube.com/watch?v=A1s4dF7gH2J",
+                "duration_label": "6:50"
+            }
+        ]
+    },
+]
+
+
+def get_day_plan(day_number: int) -> Optional[DayItineraryPlan]:
+    """Returns a validated `DayItineraryPlan` model for the requested day (1-28)."""
+    for raw in NZ_28_DAY_ITINERARY_RAW:
+        if raw["day_number"] == day_number:
+            campsite = CampsiteOption(**raw["overnight_campsite"])
+            photos = [MediaPhotoItem(**p) for p in raw["photos"]]
+            videos = [MediaVideoItem(**v) for v in raw["videos"]]
+            return DayItineraryPlan(
+                day_number=raw["day_number"],
+                date_label=raw["date_label"],
+                island=raw["island"],
+                title=raw["title"],
+                start_location=raw["start_location"],
+                end_location=raw["end_location"],
+                latitude=raw["latitude"],
+                longitude=raw["longitude"],
+                drive_distance_km=raw["drive_distance_km"],
+                drive_duration_hours=raw["drive_duration_hours"],
+                summary=raw["summary"],
+                must_do_highlights=list(raw["must_do_highlights"]),
+                places_to_check_out=list(raw["places_to_check_out"]),
+                noteworthy_campervan_tips=list(raw["noteworthy_campervan_tips"]),
+                overnight_campsite=campsite,
+                december_weather_note=raw["december_weather_note"],
+                photos=photos,
+                videos=videos,
+            )
+    return None
+
+
+def build_full_odyssey_itinerary() -> FullOdysseyItinerary:
+    """Constructs the complete 28-day `FullOdysseyItinerary` Pydantic model."""
+    days: List[DayItineraryPlan] = []
+    for day_num in range(1, 29):
+        plan = get_day_plan(day_num)
+        if plan is not None:
+            days.append(plan)
+    total_km = sum(d.drive_distance_km for d in days)
+    return FullOdysseyItinerary(
+        total_days=len(days),
+        total_distance_km=total_km,
+        days=days,
+    )
