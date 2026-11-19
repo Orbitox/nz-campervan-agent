@@ -83,7 +83,7 @@ def _build_day_dict(
             {
                 "title": v_title,
                 "youtube_id": v_id,
-                "embed_url": f"https://www.youtube-nocookie.com/embed/{v_id}",
+                "embed_url": f"https://www.youtube.com/embed/{v_id}",
                 "watch_url": f"https://www.youtube.com/watch?v={v_id}",
                 "duration_label": v_dur,
             }
@@ -104,7 +104,7 @@ NZ_28_DAY_ITINERARY_RAW: List[Dict[str, Any]] = [
         ("Takapuna Beach Holiday Park", "holiday_park", "Auckland North Shore", True, 78.0, ["240V Power", "Dump Station", "Hot Showers", "Beachfront"], "Book 3+ months ahead for December waterfront bays."),
         "22°C high / 14°C low; 14.8h daylight; warm sea breeze and early Pohutukawa blooms.",
         ("Auckland Harbour & Rangitoto at Sunset", f"{_U}1507699622108-4be3abd695ad?auto=format&fit=crop&w=1200&q=80", "Auckland"),
-        ("Auckland & North Shore Aerial Tour (4K)", "R6_3n9jU6dE", "6:15"),
+        ("Best Things To Do in Auckland New Zealand 2026 4K", "bsuX9Y58wZ4", "Island Hopper TV"),
     ),
     _build_day_dict(
         2, "North Island", "Northland Coastline: Whangarei Falls to the Bay of Islands",
@@ -116,7 +116,7 @@ NZ_28_DAY_ITINERARY_RAW: List[Dict[str, Any]] = [
         ("Waitangi Holiday Park", "holiday_park", "Bay of Islands", True, 68.0, ["240V Power", "Estuary Views", "Dump Station", "Camp Kitchen"], "Walking distance to Waitangi Treaty Grounds and Paihia."),
         "24°C high / 15°C low; humid subtropical sunshine; UV index 11+.",
         ("Turquoise Coves of the Bay of Islands", f"{_U}1589802829985-817e51171b92?auto=format&fit=crop&w=1200&q=80", "Bay of Islands"),
-        ("Bay of Islands & Waitangi Treaty Grounds Guide", "vX8m7t3cK9A", "8:40"),
+        ("Explore Paihia & Russell: Gateway to New Zealand's Bay of Islands | New Zealand Travel Guide", "H0wGjEUDkQ4", "OziTraveler"),
     ),
     _build_day_dict(
         3, "North Island", "Northernmost Tip of the North Island: Cape Reinga & Te Paki Giant Dunes",
@@ -128,7 +128,7 @@ NZ_28_DAY_ITINERARY_RAW: List[Dict[str, Any]] = [
         ("Tapotupotu Bay DOC Campsite", "doc_campsite", "Cape Reinga / Far North", False, 30.0, ["Flush Toilets", "Cold Showers", "Beachfront"], "Book online at doc.govt.nz prior to arrival; no cell coverage at bay."),
         "23°C high / 15°C low; coastal winds at the cape; crystal-clear starry skies.",
         ("Cape Reinga Lighthouse at the Northernmost Tip of NZ", f"{_U}1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1200&q=80", "Cape Reinga"),
-        ("Cape Reinga & Te Paki Sand Dunes Road Trip", "K9v5mP2xL8Q", "7:50"),
+        ("Exploring New Zealand's Giant Sand Dunes in North Island 4k - Cape Reinga", "XmzeEVAXzTg", "CraftedJourneys"),
     ),
     _build_day_dict(
         4, "North Island", "Bay of Islands Marine Cruise: Hole in the Rock & Urupukapuka Island",
@@ -140,7 +140,7 @@ NZ_28_DAY_ITINERARY_RAW: List[Dict[str, Any]] = [
         ("Paihia Top 10 Holiday Park", "holiday_park", "Bay of Islands", True, 72.0, ["240V Power", "Dump Station", "Hot Showers", "Kayak Launch"], "Ideal base for charging house batteries after Tapotupotu Bay."),
         "24°C high / 15°C low; calm morning waters ideal for kayaking and boat cruises.",
         ("Sailing Through the Bay of Islands Archipelago", f"{_U}1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80", "Urupukapuka Island"),
-        ("Hole in the Rock & Urupukapuka Island Cruise", "M4x8qL1nW2E", "6:45"),
+        ("Hole In The Rock Cruise - Bay of Islands New Zealand", "MdfAp-ljSB8", "AMS"),
     ),
     _build_day_dict(
         5, "North Island", "Ancient Giants: Hokianga Harbour & Tane Mahuta (Waipoua Kauri Forest)",
@@ -152,7 +152,7 @@ NZ_28_DAY_ITINERARY_RAW: List[Dict[str, Any]] = [
         ("Promenade Point Campground (Kai Iwi Lakes)", "doc_campsite", "Kaipara / Waipoua", False, 36.0, ["Flush Toilets", "Cold Showers", "Lakeside Access"], "Serene lakeside pitches on white silica sand."),
         "23°C high / 13°C low; dappled rainforest shade and warm freshwater lake temperatures.",
         ("Ancient Kauri Rainforest Canopy in Waipoua", f"{_U}1448375240586-882707db888b?auto=format&fit=crop&w=1200&q=80", "Waipoua Kauri Forest"),
-        ("Tane Mahuta & Waipoua Kauri Forest Walk", "P2d7kR9sT4U", "5:30"),
+        ("Tane Mahuta - The nearly 2000-year-old Kauri Tree | Northland | New Zealand | 4K", "eAeqrpZXp_g", "ScenicDrive Productions"),
     ),
     _build_day_dict(
         6, "North Island", "Coromandel Peninsula: Thames Firth Coastline to Hahei Beach",
@@ -164,7 +164,7 @@ NZ_28_DAY_ITINERARY_RAW: List[Dict[str, Any]] = [
         ("Hahei Beach Resort", "holiday_park", "Coromandel Peninsula", True, 82.0, ["240V Power", "Direct Beach Access", "Dump Station", "BBQ"], "Stay here to kayak directly to Cathedral Cove tomorrow morning."),
         "24°C high / 14°C low; warm Pacific swells and golden coastal light.",
         ("Hahei & Coromandel Coastal Cliffs", f"{_U}1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80", "Hahei Beach"),
-        ("Coromandel Peninsula Campervan Guide", "W8n4mY6vC1B", "9:12"),
+        ("Auckland to Coromandel's SECRET Scenic Drives", "OgZBbbEGerE", "Virtual Journeys with Michael Nees"),
     ),
     _build_day_dict(
         7, "North Island", "Cathedral Cove Sea Kayaking & Hot Water Beach Geothermal Spas",
@@ -176,7 +176,7 @@ NZ_28_DAY_ITINERARY_RAW: List[Dict[str, Any]] = [
         ("Hot Water Beach Top 10 Holiday Park", "holiday_park", "Coromandel Peninsula", True, 79.0, ["240V Power", "Spade Hire", "Dump Station", "Hot Showers"], "700m flat walk to the thermal springs on Hot Water Beach."),
         "25°C high / 15°C low; warm turquoise water (~20°C) ideal for kayaking.",
         ("Cathedral Cove Natural Limestone Archway", f"{_U}1519046904884-53103b34b206?auto=format&fit=crop&w=1200&q=80", "Cathedral Cove"),
-        ("Cathedral Cove & Hot Water Beach Experience", "J3p9kL5mN7Q", "7:05"),
+        ("CATHEDRAL COVE + HOT WATER BEACH: Is This the Quickest Escape to Coromandel You Need?", "8T3JQelZu_k", "The Outroverts"),
     ),
     _build_day_dict(
         8, "North Island", "Karangahake Gorge, Hobbiton Movie Set & Arrival in Rotorua",
@@ -188,7 +188,7 @@ NZ_28_DAY_ITINERARY_RAW: List[Dict[str, Any]] = [
         ("Rotorua Thermal Holiday Park", "holiday_park", "Rotorua", True, 70.0, ["Free Geothermal Mineral Pools", "240V Power", "Dump Station"], "Includes free access to on-site natural geothermal soaking pools."),
         "23°C high / 12°C low; lush green Waikato hills and warm evening forest air.",
         ("The Shire & Hobbit Holes in Matamata", f"{_U}1518709268805-4e9042af9f23?auto=format&fit=crop&w=1200&q=80", "Hobbiton"),
-        ("Inside Hobbiton Movie Set & Redwoods Treewalk", "T5v8nK2rL4M", "8:20"),
+        ("A Tour of Hobbiton Movie Set | Nerd in New Zealand", "ihqouGmra9g", "Nerd of the Rings"),
     ),
     _build_day_dict(
         9, "North Island", "Rotorua Geothermal Heartland & Maori Cultural Hangi Feast",
@@ -200,7 +200,7 @@ NZ_28_DAY_ITINERARY_RAW: List[Dict[str, Any]] = [
         ("Rotorua Blue Lake Top 10 Holiday Park", "holiday_park", "Rotorua Lakes", True, 74.0, ["240V Power", "Freshwater Lake Swimming", "Dump Station", "Hot Showers"], "Nestled between the Blue and Green Lakes away from sulfur odors."),
         "23°C high / 12°C low; crisp morning steam rising from geothermal vents.",
         ("Champagne Pool at Wai-O-Tapu Geothermal Reserve", f"{_U}1540959733332-eab4deabeeaf?auto=format&fit=crop&w=1200&q=80", "Rotorua"),
-        ("Rotorua Geothermal Wonders & Maori Culture Tour", "H7k2mN9pQ1S", "9:45"),
+        ("New Zealand North Island: Rotorua, Geysers, Maori Culture & a Free Hobbiton | Private Tour", "j9tc3I6Ee-I", "Sydney Private Guided Tours"),
     ),
     _build_day_dict(
         10, "North Island", "Thundering Huka Falls, Orakei Korako & Lake Taupo Sail",
@@ -212,7 +212,7 @@ NZ_28_DAY_ITINERARY_RAW: List[Dict[str, Any]] = [
         ("Whakapapa Holiday Park (Tongariro National Park)", "holiday_park", "Tongariro National Park", True, 66.0, ["240V Power", "Alpine Shuttle Pickup", "Hot Showers", "Dump Station"], "Shuttle buses for the Tongariro Crossing pick up right at the park gate."),
         "20°C in Taupo / 8°C overnight at Whakapapa Village (1,100m elevation).",
         ("Turquoise Rapids of Huka Falls & Lake Taupo", f"{_U}1501785888041-af3ef285b470?auto=format&fit=crop&w=1200&q=80", "Taupo"),
-        ("Huka Falls & Lake Taupo Maori Rock Carvings", "L9c4vB7nX2Z", "6:20"),
+        ("Top 8 Things to Do in Taupo | New Zealand Travel Guide", "sQFv9R1DSs8", "Ricky and Jasmine"),
     ),
     _build_day_dict(
         11, "North Island", "Tongariro Alpine Crossing: Emerald Crater Lakes & Volcanic Peaks",
@@ -224,7 +224,7 @@ NZ_28_DAY_ITINERARY_RAW: List[Dict[str, Any]] = [
         ("Ohakune Top 10 Holiday Park", "holiday_park", "Ruapehu / Tongariro", True, 68.0, ["Hot Spa Pool", "240V Power", "Laundry", "Dump Station"], "Book the hot spa slot to soothe tired hiking legs."),
         "16°C valley / 5°C alpine summit; pack windproof shell, fleece, and 3L water.",
         ("Emerald Lakes on the Tongariro Alpine Crossing", f"{_U}1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80", "Tongariro Alpine Crossing"),
-        ("Hiking the Tongariro Alpine Crossing (Full Trail Guide)", "Q1w8eR5tY3U", "10:15"),
+        ("Tongariro Alpine Crossing | Tramping (Hiking) Video Series | New Zealand", "FznzbTCtGWA", "NZ Mountain Safety Council"),
     ),
     _build_day_dict(
         12, "North Island", "Kapiti Coast to Wellington: Te Papa, Cable Car & Cuba Street",
@@ -236,7 +236,7 @@ NZ_28_DAY_ITINERARY_RAW: List[Dict[str, Any]] = [
         ("Evans Bay Marina Motorhome Park (or Wellington Top 10)", "freedom_camping", "Wellington City", False, 0.0, ["Certified Self-Contained Only", "Harbour Views", "Toilets Nearby"], "Arrive before 3 PM for Evans Bay, or book Wellington Top 10 for 240V power."),
         "20°C high / 13°C low; breezy harbour conditions and twilight until 9:00 PM.",
         ("Wellington Harbour & Oriental Bay at Dusk", f"{_U}1589871973318-9ca1258faa5d?auto=format&fit=crop&w=1200&q=80", "Wellington"),
-        ("Wellington Top Sights: Te Papa, Cable Car & Weta Workshop", "Z6x3cV8bN1M", "7:40"),
+        ("The Ultimate Guide to Te Papa Museum 2026!", "N6OoDt8CPyE", "JBOC Travel Reviews"),
     ),
     _build_day_dict(
         13, "Cook Strait & Marlborough", "Cook Strait Ferry Crossing to the South Island & Marlborough Vineyard Cycling",
@@ -248,7 +248,7 @@ NZ_28_DAY_ITINERARY_RAW: List[Dict[str, Any]] = [
         ("Picton Top 10 Holiday Park", "holiday_park", "Marlborough Sounds", True, 75.0, ["240V Power", "Heated Pool", "Dump Station", "Hot Showers"], "5 minutes from Picton ferry terminal and waterfront."),
         "24°C high / 12°C low; Marlborough is one of New Zealand's sunniest regions.",
         ("Sailing Through the Marlborough Sounds into Picton", f"{_U}1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80", "Queen Charlotte Sound"),
-        ("Crossing Cook Strait by Campervan Ferry (Wellington to Picton)", "B4n7mK9pL2X", "8:10"),
+        ("NZ Road Trip Chapter Four - Wellington, Interislander Cook Strait Ferry", "l-3y4HmHYEY", "Cat Eva's Family Vlog"),
     ),
     _build_day_dict(
         14, "South Island", "Queen Charlotte Drive to Sunny Nelson & Kaiteriteri Golden Sands",
@@ -260,7 +260,7 @@ NZ_28_DAY_ITINERARY_RAW: List[Dict[str, Any]] = [
         ("Kaiteriteri Recreation Reserve Campground", "holiday_park", "Tasman / Abel Tasman", True, 76.0, ["240V Power", "Water Taxi Pier", "Dump Station", "Beachfront"], "Water taxis for Abel Tasman depart directly from the beach in front."),
         "24°C high / 13°C low; calm turquoise bays and golden silica-granite beaches.",
         ("Golden Granite Bays of Kaiteriteri & Abel Tasman", f"{_U}1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80", "Kaiteriteri"),
-        ("Queen Charlotte Drive to Kaiteriteri & Split Apple Rock", "D8v2kM4nP6R", "6:55"),
+        ("AMAZING Views On Queen Charlotte Drive | Daily Log June 12 Nelson to Picton", "eaua8s9lQ9Y", "Ari and Trevor"),
     ),
     _build_day_dict(
         15, "South Island", "Abel Tasman National Park: Water Taxi, Bark Bay & Cleopatra's Pool",
@@ -272,7 +272,7 @@ NZ_28_DAY_ITINERARY_RAW: List[Dict[str, Any]] = [
         ("The Barn Cabins & Campgrounds (Marahau)", "holiday_park", "Abel Tasman National Park", True, 68.0, ["240V Power", "At Abel Tasman Track Start", "Hot Showers"], "Located right at the southern trailhead of the Abel Tasman Coast Track."),
         "24°C high / 13°C low; pack reef-safe sunscreen, insect repellent, and swimwear.",
         ("Turquoise Lagoon & Golden Sands of Abel Tasman", f"{_U}1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=1200&q=80", "Abel Tasman National Park"),
-        ("Abel Tasman Coast Track Day Hike & Kayak Adventure", "F2j9kL4mP8T", "8:50"),
+        ("S03E01 | Introduction to the Abel Tasman Coast Track // Tips for Hiking New Zealand Great Walks", "n9fvKXhGANM", "Long White Gypsy"),
     ),
     _build_day_dict(
         16, "South Island", "Buller Gorge to the Wild West Coast: Cape Foulwind & Punakaiki Pancake Rocks",
@@ -284,7 +284,7 @@ NZ_28_DAY_ITINERARY_RAW: List[Dict[str, Any]] = [
         ("Punakaiki Beach Camp", "holiday_park", "West Coast / Paparoa", True, 65.0, ["240V Power", "Under Limestone Cliffs", "Hot Showers", "Camp Kitchen"], "Walking distance to Pororari River track and Pancake Rocks."),
         "20°C high / 11°C low; dramatic Tasman Sea surf and glowing west-coast sunsets.",
         ("Punakaiki Limestone Pancake Rocks & Tasman Surf", f"{_U}1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=1200&q=80", "Punakaiki"),
-        ("Driving the Great Coast Road to Punakaiki Pancake Rocks", "G5h8jK2lN9P", "7:30"),
+        ("Pancake Rocks & Blowholes | Nature's Cinematic Coastal Spectacle at Punakaiki, New Zealand", "OXRK02o-bRw", "Lei | Cinematic Travel"),
     ),
     _build_day_dict(
         17, "South Island", "Turquoise Hokitika Gorge & Temperate Rainforest Glaciers (Franz Josef & Fox)",
@@ -296,7 +296,7 @@ NZ_28_DAY_ITINERARY_RAW: List[Dict[str, Any]] = [
         ("Rainforest Retreat Holiday Park (Franz Josef)", "holiday_park", "Glacier Country, West Coast", True, 78.0, ["240V Power", "Hot Spa & Sauna", "Dump Station", "Drying Room"], "Sheltered rainforest bays right in Franz Josef village."),
         "19°C high / 10°C low; clearest skies for glacier views are between 7:00 AM and 10:00 AM.",
         ("Franz Josef Glacier Descending into Rainforest", f"{_U}1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80", "Franz Josef Glacier"),
-        ("Hokitika Gorge & Franz Josef Glacier Heli-Hike", "N7m3kL8pQ2W", "8:45"),
+        ("Franz Josef Glacier Helicopter Tour and Hokitika Gorge, New Zealand", "m4SATyzQ-Rs", "Justin Plus Lauren"),
     ),
     _build_day_dict(
         18, "South Island", "Lake Matheson Mirror Views & Haast Pass Waterfall Highway to Wanaka",
@@ -308,7 +308,7 @@ NZ_28_DAY_ITINERARY_RAW: List[Dict[str, Any]] = [
         ("Wanaka Lakeview Holiday Park", "holiday_park", "Otago / Lake Wanaka", True, 76.0, ["240V Power", "5-Min Walk to Lakefront", "Dump Station", "Laundry"], "Easy walk to Wanaka lakefront cafes and New World supermarket."),
         "23°C high / 10°C low; dry alpine sunshine and purple/pink lupin blooms along lake shores.",
         ("Lake Wanaka & Southern Alps in Early Summer", f"{_U}1507699622108-4be3abd695ad?auto=format&fit=crop&w=1200&q=80", "Wanaka"),
-        ("Haast Pass Waterfalls to Lake Wanaka Campervan Drive", "R2t5yU8iO1P", "9:05"),
+        ("Our biggest mistake on our NZ road trip | Wanaka - Blue Pools - Lake Matheson - The West Coast", "WnlFPOIkkGk", "Travel with Deb and Matt"),
     ),
     _build_day_dict(
         19, "South Island", "Roys Peak / Diamond Lake Hike, Historic Arrowtown & Arrival in Queenstown",
@@ -320,7 +320,7 @@ NZ_28_DAY_ITINERARY_RAW: List[Dict[str, Any]] = [
         ("Queenstown Lakeview Holiday Park (or Driftaway)", "holiday_park", "Queenstown / Lake Wakatipu", True, 88.0, ["240V Power", "Lakefront Hot Tubs", "Dump Station", "Heated Bathrooms"], "Walkable to downtown Queenstown."),
         "22°C high / 9°C low; crisp alpine mornings and golden twilight past 9:15 PM.",
         ("Panoramic View Over Lake Wanaka from Roys Peak", f"{_U}1519681393784-d120267933ba?auto=format&fit=crop&w=1200&q=80", "Roys Peak & Queenstown"),
-        ("Wanaka to Queenstown via Arrowtown & Kawarau Gorge", "V9b4nM7kL3Q", "8:30"),
+        ("Roys Peak Track - The Must-Do Summit Hike in Wanaka, New Zealand", "JP8xmHdU_pI", "Jelbuilder"),
     ),
     _build_day_dict(
         20, "South Island", "Queenstown Alpine Adventures: Skyline Gondola, TSS Earnslaw & Drive to Te Anau",
@@ -332,7 +332,7 @@ NZ_28_DAY_ITINERARY_RAW: List[Dict[str, Any]] = [
         ("Tasman Holiday Parks - Te Anau", "holiday_park", "Fiordland / Lake Te Anau", True, 74.0, ["240V Power", "Lakefront Pitches", "Hot Tub", "Dump Station"], "Right on Lake Te Anau; gives you a 2.5h head start to Milford Sound."),
         "20°C high / 8°C low; long summer evenings on the Lake Te Anau shoreline.",
         ("Lake Wakatipu & The Remarkables from Bob's Peak", f"{_U}1507699622108-4be3abd695ad?auto=format&fit=crop&w=1200&q=80", "Queenstown"),
-        ("Queenstown Ultimate Guide & Drive to Te Anau", "X3c6vB9nM1K", "9:50"),
+        ("Queenstown Skyline Gondola and Luge", "kobNrZx_wzQ", "Viator"),
     ),
     _build_day_dict(
         21, "South Island", "The Eighth Wonder of the World: Milford Highway, Homer Tunnel & Milford Sound Cruise",
@@ -344,7 +344,7 @@ NZ_28_DAY_ITINERARY_RAW: List[Dict[str, Any]] = [
         ("Milford Sound Lodge Rainforest Campervan Park", "holiday_park", "Fiordland National Park", True, 120.0, ["240V Power", "Pio Pio Restaurant", "Hot Showers", "Guest Lounge"], "The ONLY powered campervan park inside Milford Sound; book early."),
         "18°C high / 7°C low; Dec 21 is the Southern Hemisphere Summer Solstice (~15.7h daylight).",
         ("Mitre Peak Rising 1,692m Above Milford Sound", f"{_U}1469521669194-babb45599def?auto=format&fit=crop&w=1200&q=80", "Milford Sound"),
-        ("Driving the Milford Road & Cruising Milford Sound in 4K", "Y7u2iO5pA8S", "11:10"),
+        ("Experiencing Majestic Milford Sound, New Zealand - Scenic Visuals (4K)", "40tPmXU2u10", "RightAngleStudio"),
     ),
     _build_day_dict(
         22, "South Island", "Southernmost Tip of the South Island: Bluff Stirling Point & Slope Point",
@@ -356,7 +356,7 @@ NZ_28_DAY_ITINERARY_RAW: List[Dict[str, Any]] = [
         ("Curio Bay Natural Heritage Campground", "holiday_park", "The Catlins / Southland", True, 62.0, ["240V Power", "Flax-Sheltered Bays", "Hot Showers", "Interpretive Centre"], "Tucked into native flax right between Porpoise Bay and the Petrified Forest."),
         "18°C high / 9°C low; longest twilight in New Zealand—still light at 10:00 PM!",
         ("Wind-Sculpted Cliffs at Slope Point & The Catlins", f"{_U}1500534623283-312aade485b7?auto=format&fit=crop&w=1200&q=80", "Bluff & Slope Point"),
-        ("Bluff Stirling Point, Slope Point (Southern Tip) & Curio Bay", "M1n4bV7cX9Z", "9:25"),
+        ("Catlins Road Trip: Waipapa Point & Slope Point, New Zealand", "Tm14GZ9Huw0", "NZ Pocket Guide"),
     ),
     _build_day_dict(
         23, "South Island", "The Catlins Waterfalls & Nugget Point to Otago Peninsula Wildlife (Dunedin)",
@@ -368,7 +368,7 @@ NZ_28_DAY_ITINERARY_RAW: List[Dict[str, Any]] = [
         ("Portobello Village Tourist Park (Otago Peninsula)", "holiday_park", "Otago Peninsula / Dunedin", True, 68.0, ["240V Power", "Dump Station", "Hot Showers", "Laundry"], "15 minutes from Taiaroa Head Royal Albatross Centre."),
         "19°C high / 10°C low; coastal breezes ideal for watching 3m-wingspan Royal Albatross soar.",
         ("Nugget Point Lighthouse Above the Southern Ocean", f"{_U}1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80", "Nugget Point & Dunedin"),
-        ("The Catlins Waterfalls, Nugget Point & Otago Peninsula", "K4l7jH2gF5D", "8:55"),
+        ("Otago Peninsula & The Catlins | New Zealand", "LAVWIhEbsX8", "Ryan Wilkes"),
     ),
     _build_day_dict(
         24, "South Island", "Moeraki Boulders, Oamaru Victorian Quarter & Drive to Aoraki / Mount Cook",
@@ -380,7 +380,7 @@ NZ_28_DAY_ITINERARY_RAW: List[Dict[str, Any]] = [
         ("White Horse Hill DOC Campground (Aoraki / Mount Cook)", "doc_campsite", "Aoraki / Mount Cook National Park", False, 36.0, ["Flush Toilets", "Indoor Cooking Shelter", "Drinking Water", "At Hooker Valley Trailhead"], "Surrounded by glaciated 3,000m+ peaks right at the Hooker Valley trailhead."),
         "20°C daytime / 7°C alpine night; world-renowned Aoraki Mackenzie Dark Sky Reserve stargazing.",
         ("Aoraki / Mount Cook & Turquoise Lake Pukaki", f"{_U}1519681393784-d120267933ba?auto=format&fit=crop&w=1200&q=80", "Aoraki / Mount Cook"),
-        ("Moeraki Boulders & Driving SH80 to Aoraki / Mount Cook", "S8d3fG6hJ9K", "8:15"),
+        ("Lake Pukaki to Lake Tasman, Mt Cook, New Zealand", "GqQTSCcVbAw", "Devesh Sahai"),
     ),
     _build_day_dict(
         25, "South Island", "Christmas Day in the Southern Alps: Hooker Valley Track & Tasman Glacier Icebergs",
@@ -392,7 +392,7 @@ NZ_28_DAY_ITINERARY_RAW: List[Dict[str, Any]] = [
         ("Glentanner Park Centre (or White Horse Hill DOC)", "holiday_park", "Aoraki / Mount Cook", True, 68.0, ["240V Power", "Hot Showers", "Dump Station", "Camp Kitchen"], "Glentanner offers full 240V power 18 km down the valley."),
         "21°C high / 8°C low; extreme alpine UV exposure off snow—wear polarized sunglasses.",
         ("Hooker Valley Boardwalk Toward Aoraki / Mount Cook", f"{_U}1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80", "Hooker Valley Track"),
-        ("Hiking the Hooker Valley Track & Tasman Glacier (4K)", "P9o2iU5yT7R", "9:30"),
+        ("Hiking the Hooker Valley Track | Mount Cook views & Hooker Lake, Explore New Zealand With Us!", "8c3vlm4aLtA", "West Of Anywhere Travel"),
     ),
     _build_day_dict(
         26, "South Island", "Lake Tekapo Lupins, Mount John Observatory & Dark Sky Stargazing",
@@ -404,7 +404,7 @@ NZ_28_DAY_ITINERARY_RAW: List[Dict[str, Any]] = [
         ("Lakes Edge Holiday Park (Lake Tekapo)", "holiday_park", "Mackenzie Basin / Lake Tekapo", True, 76.0, ["240V Power", "Lakeside Setting", "Dump Station", "Hot Showers"], "Right beside Tekapo Springs and Mount John trailhead."),
         "23°C high / 9°C low; Mackenzie Basin has the clearest night skies in the Southern Hemisphere.",
         ("Blooming December Lupins & Turquoise Lake Tekapo", f"{_U}1507699622108-4be3abd695ad?auto=format&fit=crop&w=1200&q=80", "Lake Tekapo"),
-        ("Lake Tekapo Lupins, Mount John & Dark Sky Reserve", "E4r7tY1uI9O", "7:15"),
+        ("The Church of the Good Shepherd Lake Tekapo #NZMustDo | New Zealand", "9HxOmnSRUzQ", "100% Pure New Zealand"),
     ),
     _build_day_dict(
         27, "South Island", "Rakaia Gorge Turquoise Canyon & Christchurch Garden City",
@@ -416,7 +416,7 @@ NZ_28_DAY_ITINERARY_RAW: List[Dict[str, Any]] = [
         ("Tasman Holiday Parks - Christchurch", "holiday_park", "Christchurch", True, 75.0, ["240V Power", "Indoor Heated Pool", "Dump Station", "12-Min to Airport Depots"], "Direct bus link to city center and 12 mins from Christchurch Airport depots."),
         "23°C high / 12°C low; warm Canterbury breeze and blooming rose gardens.",
         ("Christchurch Botanic Gardens & Avon River Punting", f"{_U}1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80", "Christchurch"),
-        ("Scenic Route 72 to Christchurch & Riverside Market Tour", "W2q5eR8tY4U", "7:45"),
+        ("Christchurch Botanic Gardens 4K Walking Tour | New Zealand's Most Peaceful Garden", "-ZzrGtC-DFk", "Love Travel New Zealand & Beyond"),
     ),
     _build_day_dict(
         28, "South Island", "Port Hills Panorama, International Antarctic Centre & Christchurch Departure",
@@ -428,7 +428,7 @@ NZ_28_DAY_ITINERARY_RAW: List[Dict[str, Any]] = [
         ("Christchurch Airport Campervan Depot (Departure Day)", "holiday_park", "Christchurch International Airport (CHC)", True, 0.0, ["Final Dump Station", "LPG Refill Nearby", "Airport Shuttle Transfer"], "Allow 45 mins at the depot for vehicle inspection and terminal shuttle."),
         "23°C high / 12°C low; clear summer skies for your departure flight over the Southern Alps.",
         ("Port Hills & Lyttelton Harbour Panorama, Christchurch", f"{_U}1501785888041-af3ef285b470?auto=format&fit=crop&w=1200&q=80", "Christchurch Airport & Port Hills"),
-        ("Christchurch Port Hills, Antarctic Centre & Trip Finale", "A1s4dF7gH2J", "6:50"),
+        ("Christchurch Gondola Ride & Port Hills Views, New Zealand", "oYNEzoDdqlI", "Timeless Journeys NZ & Beyond"),
     ),
 ]
 

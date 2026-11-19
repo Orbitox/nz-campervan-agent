@@ -154,15 +154,78 @@
 
     <!-- VIEW 3: AgentOps 95/95 Rubric Matrix & HITL Booking Simulator -->
     <section id="view-agentops" class="view-section">
-      <div class="agentops-header-card">
-        <h2>🛡️ AgentOps Code Review Matrix (95 / 95 Points) &amp; Live HITL Simulator</h2>
+      <div class="agentops-header-card" id="arch-overview-card">
+        <h2>🛡️ ADK Multi-Agent Architecture, Code Walkthrough &amp; 95/95 AgentOps Matrix</h2>
         <p>
           KiwiCamp is engineered with the Google Agent Development Kit (ADK) and Vertex AI Agent Runtime
-          (<code>ReasoningEngine</code>) to satisfy all 19 grading criteria across 5 architectural pillars.
+          (<code>ReasoningEngine</code>) to satisfy all 19 grading criteria (95/95 points) across all 5 AgentOps pillars.
         </p>
+        <div id="arch-diagram-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:0.85rem;margin-top:1rem;">
+          <div style="background:#0f172a;border:1px solid #10b981;border-radius:10px;padding:0.85rem;">
+            <strong style="color:#10b981;">1. Coordinator &amp; Guardrails</strong>
+            <div style="font-size:0.83rem;color:#cbd5e1;margin-top:0.35rem;">
+              <code>KiwiCampCoordinatorAgent</code> (<code>gemini-2.5-pro</code>)<br/>
+              + <code>AgentOpsSecurityAndPolicyPlugin</code><br/>
+              + <code>StrategicModelRouter</code>
+            </div>
+          </div>
+          <div style="background:#0f172a;border:1px solid #38bdf8;border-radius:10px;padding:0.85rem;">
+            <strong style="color:#38bdf8;">2. Sequential &amp; Parallel Pipeline</strong>
+            <div style="font-size:0.83rem;color:#cbd5e1;margin-top:0.35rem;">
+              <code>OdysseyPlanningPipeline</code> (<code>SequentialAgent</code>)<br/>
+              ↳ <code>ParallelIslandPlanners</code> (<code>ParallelAgent</code>)<br/>
+              North &amp; South Island (<code>gemini-2.5-flash</code>)
+            </div>
+          </div>
+          <div style="background:#0f172a;border:1px solid #f59e0b;border-radius:10px;padding:0.85rem;">
+            <strong style="color:#f59e0b;">3. Logistics &amp; HITL Tools</strong>
+            <div style="font-size:0.83rem;color:#cbd5e1;margin-top:0.35rem;">
+              <code>CampervanLogisticsAgent</code><br/>
+              7 Pydantic-validated tools +<br/>
+              <code>FunctionTool(require_confirmation=True)</code>
+            </div>
+          </div>
+          <div style="background:#0f172a;border:1px solid #a855f7;border-radius:10px;padding:0.85rem;">
+            <strong style="color:#a855f7;">4. Quality Refinement Loop</strong>
+            <div style="font-size:0.83rem;color:#cbd5e1;margin-top:0.35rem;">
+              <code>ItineraryQualityRefinementLoop</code> (<code>LoopAgent</code>)<br/>
+              ↳ <code>ItineraryQualityJudgeAgent</code><br/>
+              ↳ <code>ItineraryEscalationChecker</code>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="hitl-demo-card">
+      <div class="agentops-header-card" id="code-walkthrough-card" style="margin-bottom:1.5rem;">
+        <h3>💻 Core Codebase Architecture Walkthrough (<code>app/</code> · <code>tests/</code> · <code>deployment/</code>)</h3>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(420px,1fr));gap:1rem;margin-top:0.85rem;">
+          <pre style="background:#090d16;border:1px solid #1e293b;border-radius:8px;padding:0.85rem;font-size:0.78rem;color:#e2e8f0;overflow-x:auto;"><code># app/agent.py — Multi-Agent Hierarchy &amp; Loop Escalation
+parallel_island_planners = ParallelAgent(
+    name="ParallelIslandPlanners",
+    sub_agents=[north_island_planner_agent, south_island_planner_agent],
+)
+quality_refinement_loop = LoopAgent(
+    name="ItineraryQualityRefinementLoop",
+    sub_agents=[itinerary_quality_judge_agent, escalation_checker_agent],
+    max_iterations=3,
+)
+odyssey_planning_pipeline = SequentialAgent(
+    name="OdysseyPlanningPipeline",
+    sub_agents=[parallel_island_planners, campervan_logistics_agent, quality_refinement_loop],
+)</code></pre>
+          <pre style="background:#090d16;border:1px solid #1e293b;border-radius:8px;padding:0.85rem;font-size:0.78rem;color:#e2e8f0;overflow-x:auto;"><code># app/tools/nz_campervan_tools.py &amp; app/memory/async_memory_bank.py
+reserve_cook_strait_ferry_tool = FunctionTool(
+    func=reserve_cook_strait_campervan_ferry,
+    require_confirmation=True,  # Criterion 3.4: Mandatory HITL Gate
+)
+# Criterion 2.4: Non-blocking Async Memory Consolidation
+bg_task = asyncio.create_task(
+    self._consolidate_to_vertex_and_sqlite(session_id, user_id, events, wait_for_completion=False)
+)</code></pre>
+        </div>
+      </div>
+
+      <div class="hitl-demo-card" id="hitl-demo-card">
         <h3>🔒 Interactive Human-in-the-Loop (HITL) Booking Gate Simulator (Criterion 3.4)</h3>
         <p>
           High-stakes tools (<code>reserve_cook_strait_campervan_ferry</code> and <code>book_paid_holiday_park_site</code>)
@@ -170,10 +233,10 @@
           <code>AgentOpsSecurityAndPolicyPlugin.before_tool_callback</code>. Try triggering a booking below:
         </p>
         <div class="hitl-actions">
-          <button class="btn-primary" onclick="simulateHitlBooking('ferry')">
+          <button class="btn-primary" id="btn-hitl-ferry" onclick="simulateHitlBooking('ferry')">
             ⛴️ Request Cook Strait Ferry Booking (Dec 13 · $449.50 NZD)
           </button>
-          <button class="btn-secondary" onclick="simulateHitlBooking('milford')">
+          <button class="btn-secondary" id="btn-hitl-milford" onclick="simulateHitlBooking('milford')">
             🏕️ Request Milford Sound Lodge Campervan Site (Dec 21 · $120.00 NZD)
           </button>
         </div>

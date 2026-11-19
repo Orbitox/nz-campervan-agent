@@ -31,3 +31,4 @@ crash.log
 artifacts/
 web/itinerary_data.json
 web/a2ui_surface.json
+web/*.mp4

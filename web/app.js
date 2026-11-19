@@ -153,14 +153,16 @@ function renderDaysFeed() {
               src="${video.embed_url}"
               title="${escapeQuotes(video.title)}"
               loading="lazy"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
               allowfullscreen>
             </iframe>
           </div>
           <strong>🎬 ${video.title}</strong>
         </div>
         <div class="video-footer">
-          <span>Duration: ${video.duration_label}</span>
+          <span>📺 ${video.duration_label}</span>
           <a href="${video.watch_url}" target="_blank" rel="noopener noreferrer">Watch on YouTube ↗</a>
         </div>
       </div>
@@ -297,7 +299,7 @@ function simulateHitlBooking(kind) {
       `  Safety Notice: Campervan LPG gas valve MUST be shut off prior to boarding.`,
       ``,
       `👉 Click [Approve & Execute Booking] below to simulate human confirmation:`
-    ].join('\n') + `\n<button class="btn-primary" style="margin-top:10px;" onclick="confirmHitlAction('ferry')">✅ Approve $449.50 NZD Cook Strait Ferry</button>`;
+    ].join('\n') + `\n<button class="btn-primary" id="btn-approve-hitl" style="margin-top:10px;" onclick="confirmHitlAction('ferry')">✅ Approve $449.50 NZD Cook Strait Ferry</button>`;
   } else {
     consoleEl.innerHTML = [
       `[AUDIT_PHASE: INTENT] corr_id="corr-milford-dec21" tool="book_paid_holiday_park_site"`,
@@ -306,7 +308,7 @@ function simulateHitlBooking(kind) {
       `  Hold Reference: HOLD-HITL-CAMPSITE | Total Charge: $120.00 NZD`,
       ``,
       `👉 Click [Approve & Execute Booking] below to simulate human confirmation:`
-    ].join('\n') + `\n<button class="btn-primary" style="margin-top:10px;" onclick="confirmHitlAction('milford')">✅ Approve $120.00 NZD Milford Sound Lodge</button>`;
+    ].join('\n') + `\n<button class="btn-primary" id="btn-approve-hitl" style="margin-top:10px;" onclick="confirmHitlAction('milford')">✅ Approve $120.00 NZD Milford Sound Lodge</button>`;
   }
 }
 
